@@ -16,29 +16,25 @@ ul {
     display: inline-block;
 }
 
+#menu-home {
+    color: black;
+}
+
 a {
     text-decoration: none;
 }
 
-ul.navigation_grid_container{
+ul.navigation-grid-container {
     padding-left: 12.5%;
+    padding-top: 42px;
     display: grid;
     grid-template-columns: auto auto auto auto;
     text-align: left;
 }
 
-.dropdown {
-    position: absolute;
-    display: none;
-    text-align: left;
-}
-
-.dropdown li {
-    /*text-align: left;*/
-}
-
 .navigation a {
-    color: darkgray;
+    font-size: 1.75em;
+    color: #606060;
 }
 
 .navigation li:hover > a {
@@ -47,4 +43,19 @@ ul.navigation_grid_container{
 
 .navigation li:hover .dropdown {
     display: block;
+}
+
+.dropdown {
+    position: absolute;
+    display: none;
+    text-align: left;
+    padding-left: 4px;
+}
+
+.dropdown a {
+    font-size: 1.375em;
+}
+
+.dropdown li {
+    /*text-align: left;*/
 }
