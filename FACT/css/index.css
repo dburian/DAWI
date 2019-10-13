@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "DINPro";
+  font-style: normal;
+  font-weight: bold;
+  src: local("DINPro Bold"), url("/font/DINPro-Bold.woff") format("woff");
+}
+body {
+  font-family: "DINPro", Sans-serif;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #606060;
+}
+
+a:hover {
+  color: #000000;
+}
+
+#nav-projects-dropdown {
+  display: none;
+}
+
+.l-4-col-grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.l-centered-flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+#margin-wrapper {
+  margin: 0 70px 0 70px;
+}
+
+#max-width-wrapper {
+  width: 100%;
+  display: inline-block;
+}
+
+#nav {
+  text-align: center;
+}
+
+#nav-projects-dropdown {
+  text-align: left;
+  position: relative;
+  top: -5px;
+  left: 5px;
+}
+
+#nav-projects-container:hover #nav-projects-dropdown {
+  display: block;
+}
+
+.nav-header {
+  line-height: 50px;
+}
+
+.nav-dropdown-header {
+  line-height: 30px;
+}
+
+/*# sourceMappingURL=index.css.map */

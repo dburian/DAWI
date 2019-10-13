@@ -47,21 +47,23 @@
 	something that is a small part of a web page and using id, would limit us to not using that small part again. On the other hand when laying out the main parts of the webpage,
 	like the main wrapper or main content, we rely on the fact that there is only one main content or wrapper, therefore we use an id. But there is a catch. Often we see a reapeating layout
 	so we would like to use a class, because it is likely that we would like to use it on the same page. So... the convention proposal is following...
-		element_type	-> base style 
-		#id 		-> layout style
-		.li-layout_name -> repeating layout style
-		.class_name 	-> module style
+		element-type		-> base style 
+		#id 			-> layout style
+		.l-layout-name 		-> repeating layout style
+		.class-name 		-> module style
+		.is-state-class-name	-> state style
 	
-	btw if you are wondering from where I get this info it's here:
+	btw if you are wondering from where did I get this info it's here:
 		https://learn.shayhowe.com/advanced-html-css/performance-organization/
 		(and also the smacss website)
 
-	I know that by now, it's became a quite a read, but I think in the long run, it is going to pay off.
+	I know that, by now, it's became a quite a read, but I think in the long run, and also seems like additional work, but believe me, by the end of the website we are going to be glad, that
+	we chose some way of distinguishing between a module style and a layout style. Image instead of working with strings, ints, floats, file streams, arrays and ... but working with a bunch of
+	objects. You wouldn't know whats what by the end of a small homework :D.
 
 12.10.2019 - Note on SASS (dburian)
 	Because I think SASS saves time and money, I am going to be using it. Feel free not to use it or join me. Because you two are leaning towards raw css we can keep the production webpage
-	in raw css and if I'll want to incorporate the changes I will revrite it to sass :). Sass just generates raw css, so me using sass will have no efect on your workflow. But do not be
-	confused if you see a .scss files somewhere :). I will try to keep them seperate, so the confusion is minimal.
+	in raw css and if I'll want to incorporate the changes I will revrite it to sass :). Sass just generates raw css, so me using sass will have no efect on your workflow. So do not be confused if you see a .sass files somewhere :).
 
 12.10.2019 - Trello tasks (dburian)
 	I've added some more detailed tasks, that more closely follow our future goals. I know that you have done some work on the website already so feel free to add a task or
