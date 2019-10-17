@@ -1,0 +1,71 @@
+12.10.2019 - Log created (dburian)
+	I've create this log to help us maintain this project. Here we can archive:
+		. reasoning for important decisions
+		. milestones
+		. todos
+		. your thoughts regarding the project
+		and many others. Feel free to abuse this log, unimportant messages can be deleted afterwards.
+	For each new subject please include the date and (eventhough this will be evident from git log) the author of the log.
+	Also if you want you can write to log in spanish, but just for the sake of everybody to understand, I decided to write in english. Hope you don't mind :).
+
+12.10.2019 - Git strategy (dburian)
+	To maximalize our team effort I feel like our git committing strategy should to be consistent and correct, so we avoid rollbacks and difficult merges.
+	I propose the following:
+		. every member has his dev branch of the project and works on his part (possibly marked in trello board)
+		. everytime a team member would like to incorporate changes to the master branch (for example after he finishes a task in trello board),
+			he would first merge a master branch into his, resolve confilcts there and then merging the master branch with his.
+	The result is that the master branch will always be in a consistent state. The only problem is when two members are working on a merge, so we should give others a heads up,
+	before trying to merge the master branch with ours.
+	Please write here a comment if you agree or wish to propose something different...
+
+12.10.2019 - Project folder structure (dburian)
+	Just to maintain our project a little easier I decided to give our folder structure a redesign so we don't have to think about where stuff is or where to put it.
+	Again just proposal, so feel free to write a comment below this...
+
+	DAWI/	--home dir, you can put here stuff that is somehow connected to the project
+		fact/	--web page, place for all .htmls
+			css/	--place for all .css, inner structure described below
+				base/
+				layout/
+				modules/
+				state/
+			js/
+			images/
+		mockups/
+
+	In my experience .css files can become a mess. There are many ways of sorting the styles (not only the files), so before proposing I read for a little while.
+	Decided to go with SMACSS - Scalable and Modular Architecture for CSS. The basics are as follows:
+		. base	- all the styles that are connected to types of elements (for example we do not want a visited link to have that purplish color no matter where it is on the website)
+			- these styles are applyied always and everywhere
+		. layout - divide the page into sections. Layouts hold one or more modules together.
+		. modules -  are the reusable, modular parts of our design. They are the callouts, the sidebar sections, the product lists and so on.
+		. state - are ways to describe how our modules or layouts will look when in a particular state.
+	--more info here: http://smacss.com/book/categorizing
+
+	Also I would like to propose a naming convention... Typically ids are going to be used in layouts, just because there is no reason for a module to have an id, when it should
+	represent a reusable part of a web page, thus it is expected that there will be more modules of the same type in one page. Even when you think a module is unique, it is still
+	something that is a small part of a web page and using id, would limit us to not using that small part again. On the other hand when laying out the main parts of the webpage,
+	like the main wrapper or main content, we rely on the fact that there is only one main content or wrapper, therefore we use an id. But there is a catch. Often we see a reapeating layout
+	so we would like to use a class, because it is likely that we would like to use it on the same page. So... the convention proposal is following...
+		element-type		-> base style 
+		#id 			-> layout style
+		.l-layout-name 		-> repeating layout style
+		.class-name 		-> module style
+		.is-state-class-name	-> state style
+	
+	btw if you are wondering from where did I get this info it's here:
+		https://learn.shayhowe.com/advanced-html-css/performance-organization/
+		(and also the smacss website)
+
+	I know that, by now, it's became a quite a read, but I think in the long run, and also seems like additional work, but believe me, by the end of the website we are going to be glad, that
+	we chose some way of distinguishing between a module style and a layout style. Image instead of working with strings, ints, floats, file streams, arrays and ... but working with a bunch of
+	objects. You wouldn't know whats what by the end of a small homework :D.
+
+12.10.2019 - Note on SASS (dburian)
+	Because I think SASS saves time and money, I am going to be using it. Feel free not to use it or join me. Because you two are leaning towards raw css we can keep the production webpage
+	in raw css and if I'll want to incorporate the changes I will revrite it to sass :). Sass just generates raw css, so me using sass will have no efect on your workflow. So do not be confused if you see a .sass files somewhere :).
+
+12.10.2019 - Trello tasks (dburian)
+	I've added some more detailed tasks, that more closely follow our future goals. I know that you have done some work on the website already so feel free to add a task or
+	to sign yourself to one that already exists and move it to "Doing" column. Thanks :).
+
