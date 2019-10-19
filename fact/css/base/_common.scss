@@ -1,0 +1,44 @@
+@import 'font';
+
+$font-family: 'DINPro', Sans-serif;
+$font-weight: bold;
+$active-link-color: #000000;
+$inactive-link-color: #606060;
+
+body {
+  font {
+    family: $font-family;
+    weight: $font-weight;
+  }
+  margin: 0;
+  padding: 0;
+
+}
+
+h1 {
+  font-size: 20px ;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $inactive-link-color;
+}
+
+
+a:hover {
+  color: $active-link-color;
+}

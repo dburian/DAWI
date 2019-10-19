@@ -1,4 +1,4 @@
-$_font-directory: '/font'
+$_font-directory: '/font';
 
 //@font-face
 //  font-family: 'DINPro Light'
@@ -12,11 +12,13 @@ $_font-directory: '/font'
 //  font-weight: normal
 //  src: local('DINPro Medium'), url('#{$_font-directory}/DINPro-Medium tr.woff') format('woff')
 
-@font-face
-  font-family: 'DINPro'
-  font-style: normal
-  font-weight: bold
-  src: local('DINPro Bold'), url('#{$_font-directory}/DINPro-Bold.woff') format('woff')
+@font-face {
+  font-family: 'DINPro';
+  font-style: normal;
+  font-weight: bold;
+  src: local('DINPro Bold'), url('#{$_font-directory}/DINPro-Bold.woff') format('woff');
+}
+
 
 //@font-face
 //  font-family: 'DINPro Black'
