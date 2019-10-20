@@ -15,15 +15,17 @@ body {
 }
 
 h1 {
-  //font-size: 20px;
+  font-size: 1.45rem;
   margin: 0;
   padding: 0;
+  text-transform: uppercase;
 }
 
-h2 {
-  //font-size: 13px;
+h3 {
+  font-size: 1.15rem;
   margin: 0;
   padding: 0;
+  text-transform: uppercase;
 }
 
 ul {
@@ -35,8 +37,8 @@ ul {
 a {
   text-decoration: none;
   color: $inactive-link-color;
+  cursor: pointer;
 }
-
 
 a:hover {
   color: $active-link-color;

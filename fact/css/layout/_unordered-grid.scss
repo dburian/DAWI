@@ -4,10 +4,10 @@ $column-width: (100% - 3*$column-gutter) / 4;
 $row-gutter: 90/1440 * 100vw;
 $row-width: 370/1440 * 100vw;
 
-.l-4-col-grid-container {
+.l-unordered-grid-container {
   display: grid;
-  grid-template-columns: $column-width $column-width $column-width $column-width;
-  grid-template-rows: $row-width;
+  grid-template-columns: repeat(4, $column-width);
+  grid-auto-rows: $row-width;
   grid-column-gap: $column-gutter;
   grid-row-gap: $row-gutter;
 }
