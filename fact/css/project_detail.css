@@ -107,10 +107,38 @@ p {
   height: 20.9548611111vw;
 }
 
-.l-2-col-grid {
+.l-project-detail-grid {
   display: grid;
-  grid-template-columns: repeat(2, 44.3402777778vw);
+  grid-template-columns: repeat(12, 5.3645833333vw);
   grid-column-gap: 2.4305555556vw;
+  grid-template-rows: auto;
+  grid-template-areas: "gallery gallery gallery gallery gallery gallery gallery text text text text text";
+}
+
+#gallery {
+  grid-area: gallery;
+}
+
+#main-gallery-image {
+  width: 100%;
+}
+
+#gallery-images-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#project-text {
+  grid-area: text;
+}
+
+.nav-list-item {
+  line-height: 50px;
+}
+
+.nav-dropdown-list-item {
+  line-height: 30px;
 }
 
 .word-divider {
@@ -124,31 +152,9 @@ p {
   filter: grayscale(100%);
 }
 
-.nav-list-item {
-  line-height: 50px;
+.gallery-image-thumb {
+  width: 5.2083333333vw;
+  margin: 0.3472222222vw 0.1736111111vw 0.3472222222vw 0.1736111111vw;
 }
 
-.nav-dropdown-list-item {
-  line-height: 30px;
-}
-
-.square-view {
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-between;
-  justify-content: center;
-}
-
-.square-view-image {
-  object-fit: cover;
-}
-
-.square-view-header {
-  width: 100%;
-  text-align: center;
-  height: 3.4722222222vw;
-  color: #000000;
-}
-
-/*# sourceMappingURL=about_us.css.map */
+/*# sourceMappingURL=project_detail.css.map */
