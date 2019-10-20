@@ -1,9 +1,6 @@
 @import '../state/_state_nav';
 
-.l-4-col-grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-}
+$margin: 64/1440 * 100vw;
 
 .l-centered-flex-container {
   display: flex;
@@ -11,7 +8,7 @@
 }
 
 #margin-wrapper {
-  margin: 0 70px 0 70px;
+  margin: 0 $margin 0 $margin;
 }
 
 #max-width-wrapper {

@@ -7,14 +7,14 @@
 body {
   font-family: "DINPro", Sans-serif;
   font-weight: bold;
-  font-size: calc(1rem * 0.8 + 1vw);
+  font-size: 1rem;
   margin: 0;
   padding: 0;
 }
 
 h1 {
   margin: 0;
-  padding: 2em;
+  padding: 0;
 }
 
 h2 {
@@ -41,18 +41,13 @@ a:hover {
   display: none;
 }
 
-.l-4-col-grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-}
-
 .l-centered-flex-container {
   display: flex;
   justify-content: center;
 }
 
 #margin-wrapper {
-  margin: 0 70px 0 70px;
+  margin: 0 4.4444444444vw 0 4.4444444444vw;
 }
 
 #max-width-wrapper {
@@ -75,12 +70,37 @@ a:hover {
   display: block;
 }
 
+.l-4-col-grid-container {
+  display: grid;
+  grid-template-columns: 23.1770833333% 23.1770833333% 23.1770833333% 23.1770833333%;
+  grid-template-rows: 25.6944444444vw;
+  grid-column-gap: 2.4305555556%;
+  grid-row-gap: 6.25vw;
+}
+
 .nav-list-item {
   line-height: 50px;
 }
 
 .nav-dropdown-list-item {
   line-height: 30px;
+}
+
+.unordered-project-image {
+  width: 100%;
+  padding-bottom: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.unordered-project-name {
+  display: flex;
+}
+
+.unordered-project-name-header {
+  width: 100%;
+  text-align: center;
 }
 
 /*# sourceMappingURL=index.css.map */
