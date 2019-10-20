@@ -5,7 +5,7 @@
   src: local("DINPro Bold"), url("/font/DINPro-Bold.woff") format("woff");
 }
 body {
-  font-family: "DINPro", Sans-serif;
+  font-family: "DINPro", sans-serif;
   font-weight: bold;
   font-size: 1rem;
   margin: 0;
