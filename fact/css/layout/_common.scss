@@ -1,6 +1,4 @@
-@import '../state/_state_nav';
-
-$margin: 64/1440 * 100vw;
+@import '../state/state_nav', 'common-variables';
 
 .l-centered-flex-container {
   display: flex;
@@ -8,7 +6,7 @@ $margin: 64/1440 * 100vw;
 }
 
 #margin-wrapper {
-  margin: 0 $margin 0 $margin;
+  margin: 0 $main-wrapper-margin 0 $main-wrapper-margin;
 }
 
 #max-width-wrapper {

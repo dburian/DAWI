@@ -6,23 +6,16 @@ $name-height: 50/1440 * 100vw;
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
+  justify-content: center;
 }
 
 .square-view-image {
-  width: 100%;
   object-fit: cover;
-}
-
-.square-view-image:after {
-  content:"";
-  display: block;
-  padding-top: 100%;
 }
 
 .square-view-header {
   width: 100%;
   text-align: center;
-  margin-top: $vertical-gutter;
   height: $name-height;
   color: $active-link-color
 }
