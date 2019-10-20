@@ -2,27 +2,26 @@
 
 $font-family: 'DINPro', Sans-serif;
 $font-weight: bold;
+$font-size: calc(1rem * 0.8 + 1vw);
 $active-link-color: #000000;
 $inactive-link-color: #606060;
 
 body {
-  font {
-    family: $font-family;
-    weight: $font-weight;
-  }
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-size: $font-size;
   margin: 0;
   padding: 0;
-
 }
 
 h1 {
-  font-size: 20px ;
+  //font-size: 20px;
   margin: 0;
-  padding: 0;
+  padding: 2em;
 }
 
 h2 {
-  font-size: 13px;
+  //font-size: 13px;
   margin: 0;
   padding: 0;
 }

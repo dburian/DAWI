@@ -5,22 +5,19 @@
   src: local("DINPro Bold"), url("/font/DINPro-Bold.woff") format("woff");
 }
 body {
+  font-family: "DINPro", Sans-serif;
+  font-weight: bold;
+  font-size: calc(1rem * 0.8 + 1vw);
   margin: 0;
   padding: 0;
-}
-body font {
-  family: "DINPro", Sans-serif;
-  weight: bold;
 }
 
 h1 {
-  font-size: 20px;
   margin: 0;
-  padding: 0;
+  padding: 2em;
 }
 
 h2 {
-  font-size: 13px;
   margin: 0;
   padding: 0;
 }
