@@ -33,3 +33,11 @@ $margin: 64/1440 * 100vw;
     display: block;
   }
 }
+
+#footer {
+  @extend .l-centered-flex-container;
+  width: 100%;
+  padding: 1em 0 1em 0;
+}
+
+

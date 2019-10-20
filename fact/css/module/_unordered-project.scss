@@ -3,6 +3,9 @@ $name-height: 50/1440 * 100vw;
 
 .unordered-project-link {
   height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
 }
 
 .unordered-project-image {
@@ -18,5 +21,9 @@ $name-height: 50/1440 * 100vw;
   text-align: center;
   margin-top: $vertical-gutter;
   height: $name-height;
+  color: $active-link-color
 }
 
+.unordered-project:hover {
+  filter: grayscale(100%);
+}
