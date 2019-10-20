@@ -4,3 +4,7 @@
   margin: 0.1em 1em 0.1em 1em;
   background: $inactive-link-color;
 }
+
+.grey-on-hover:hover {
+  filter: grayscale(100%);
+}

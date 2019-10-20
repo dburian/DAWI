@@ -97,6 +97,23 @@ p {
   grid-row-gap: 6.25vw;
 }
 
+.l-2-col-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 48.7847222222%);
+  grid-column-gap: 2.4305555556%;
+}
+
+.word-divider {
+  width: 1px;
+  line-height: 1em;
+  margin: 0.1em 1em 0.1em 1em;
+  background: #606060;
+}
+
+.grey-on-hover:hover {
+  filter: grayscale(100%);
+}
+
 .nav-list-item {
   line-height: 50px;
 }
@@ -131,15 +148,4 @@ p {
   color: #000000;
 }
 
-.word-divider {
-  width: 1px;
-  line-height: 1em;
-  margin: 0.1em 1em 0.1em 1em;
-  background: #606060;
-}
-
-.grey-on-hover:hover {
-  filter: grayscale(100%);
-}
-
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=about_us.css.map */
