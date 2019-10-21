@@ -1,6 +1,6 @@
-@import 'base/common',
-'layout/common',
-'layout/_unordered-grid',
-'module/_headers',
-'module/square-view',
-'module/_common';
+// IMPORTING COMMON STYLES (MAY INCLUDE VARIABLES USED LATER)
+@import "base/common", 'layout/common', 'module/common';
+
+@import 'layout/unordered-grid',
+'module/headers',
+'module/square-view';

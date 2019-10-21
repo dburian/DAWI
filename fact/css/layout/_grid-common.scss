@@ -1,12 +1,17 @@
-@import "common-variables";
-
 $column-gutter: 35/1440 * 100vw;
 $column-width: (100vw -  2*$main-wrapper-margin - 3*$column-gutter)/4;
 
 $row-gutter: 90/1440 * 100vw;
-$row-height: 370/1440 * 100vw;
+$row-unordered-height: 370/1440 * 100vw;
+
+$row-ordered-height: $column-width*1.05;
 
 .l-square-grid-sized {
+     width: $column-width;
+     height: $column-width;
+}
+
+.l-rect-grid-sized {
   width: $column-width;
-  height: $column-width;
+  height: $row-ordered-height;
 }

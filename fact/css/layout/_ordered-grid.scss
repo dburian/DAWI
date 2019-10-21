@@ -1,0 +1,6 @@
+.l-ordered-grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, $column-width);
+  grid-auto-rows: $row-ordered-height;
+  grid-gap: 0;
+}

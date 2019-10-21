@@ -148,10 +148,11 @@ p {
   grid-auto-rows: auto;
 }
 
-.l-2-col-grid {
+.l-ordered-grid-container {
   display: grid;
-  grid-template-columns: repeat(2, 44.3402777778vw);
-  grid-column-gap: 2.4305555556vw;
+  grid-template-columns: repeat(4, 20.9548611111vw);
+  grid-auto-rows: 22.0026041667vw;
+  grid-gap: 0;
 }
 
 .nav-list-item {
@@ -162,23 +163,12 @@ p {
   line-height: 30px;
 }
 
-.square-view {
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-between;
-  justify-content: center;
-}
-
-.square-view-image {
+.rect-view-image {
   object-fit: cover;
 }
 
-.square-view-header {
-  width: 100%;
-  text-align: center;
-  height: 3.4722222222vw;
-  color: #000000;
+.rect-view-header {
+  display: none;
 }
 
-/*# sourceMappingURL=about_us.css.map */
+/*# sourceMappingURL=ordered_projects.css.map */

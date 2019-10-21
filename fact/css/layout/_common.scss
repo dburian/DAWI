@@ -1,4 +1,4 @@
-@import '../state/state_nav', 'common-variables';
+@import '../state/state_nav', 'common-variables', '../base/variables', 'grid-common';
 
 .l-centered-flex-container {
   display: flex;
@@ -16,14 +16,20 @@
 
 #nav {
   text-align: center;
+  height: 250/1440 * 100vw;
+  padding-top: 80/1440 * 100vw;
+
+  #nav-home {
+    color: $active-link-color;
+  }
 }
 
 #nav-projects-dropdown {
   @extend %is-hidden;
   text-align: left;
   position: relative;
-  top: -5px;
-  left: 5px;
+  top: -0.3em;
+  left: 0.3em
 }
 
 #nav-projects-container:hover {
@@ -37,6 +43,7 @@
   width: 100%;
   padding: 1em 0 1em 0;
   color: $inactive-link-color;
+  margin-top: $big-gap;
 }
 
 

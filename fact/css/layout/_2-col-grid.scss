@@ -1,5 +1,3 @@
-@import 'grid-common';
-
 .l-2-col-grid {
   display: grid;
   grid-template-columns: repeat(2, 2*$column-width + $column-gutter);

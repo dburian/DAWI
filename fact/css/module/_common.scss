@@ -8,3 +8,8 @@
 .grey-on-hover:hover {
   filter: grayscale(100%);
 }
+
+.article-heading {
+  @extend %has-medium-gap-after;
+  height: 50/1440 * 100vw;
+}

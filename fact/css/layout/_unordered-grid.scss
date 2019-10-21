@@ -1,9 +1,12 @@
-@import 'grid-common';
-
 .l-unordered-grid-container {
   display: grid;
   grid-template-columns: repeat(4, $column-width);
-  grid-auto-rows: $row-height;
+  grid-auto-rows: $row-unordered-height;
   grid-column-gap: $column-gutter;
   grid-row-gap: $row-gutter;
+}
+
+.l-4-col-grid-container {
+  @extend .l-unordered-grid-container;
+  grid-auto-rows: auto;
 }

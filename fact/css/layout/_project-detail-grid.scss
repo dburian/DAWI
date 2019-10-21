@@ -1,10 +1,6 @@
-@import "grid-common";
-
-$column-width: (100vw - 2*$main-wrapper-margin - 11*$column-gutter) /12;
-
 .l-project-detail-grid {
   display: grid;
-  grid-template-columns: repeat(12, $column-width);
+  grid-template-columns: repeat(12, (100vw - 2*$main-wrapper-margin - 11*$column-gutter) /12);
   grid-column-gap: $column-gutter;
   grid-template-rows: auto;
   grid-template-areas:
