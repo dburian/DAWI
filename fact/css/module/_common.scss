@@ -2,7 +2,7 @@
   width: 1px;
   line-height: 1em;
   margin: 0.1em 1em 0.1em 1em;
-  background: $inactive-link-color;
+  background: $grey;
 }
 
 .grey-on-hover:hover {
@@ -12,4 +12,12 @@
 .article-heading {
   @extend %has-medium-gap-after;
   height: 50/1440 * 100vw;
+}
+
+.centered {
+  text-align: center;
+}
+
+.extra-info {
+  color: $grey;
 }

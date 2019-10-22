@@ -20,7 +20,7 @@
   padding-top: 80/1440 * 100vw;
 
   #nav-home {
-    color: $active-link-color;
+    color: $black;
   }
 }
 
@@ -42,7 +42,7 @@
   @extend .l-centered-flex-container;
   width: 100%;
   padding: 1em 0 1em 0;
-  color: $inactive-link-color;
+  color: $grey;
   margin-top: $big-gap;
 }
 

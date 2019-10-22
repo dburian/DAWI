@@ -64,6 +64,7 @@ a:hover {
 
 p {
   margin: 0;
+  font-size: 0.9rem;
 }
 
 #nav-projects-dropdown {
@@ -78,6 +79,12 @@ p {
 .l-rect-grid-sized {
   width: 20.9548611111vw;
   height: 22.0026041667vw;
+}
+
+.l-4-col-grid-container, .l-unordered-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 2.4305555556vw;
 }
 
 .l-centered-flex-container, #footer {
@@ -136,16 +143,17 @@ p {
   height: 3.4722222222vw;
 }
 
-.l-unordered-grid-container, .l-4-col-grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 20.9548611111vw);
-  grid-auto-rows: 25.6944444444vw;
-  grid-column-gap: 2.4305555556vw;
-  grid-row-gap: 6.25vw;
+.centered {
+  text-align: center;
 }
 
-.l-4-col-grid-container {
-  grid-auto-rows: auto;
+.extra-info {
+  color: #606060;
+}
+
+.l-unordered-grid-container {
+  grid-auto-rows: 25.6944444444vw;
+  grid-row-gap: 6.25vw;
 }
 
 .nav-list-item {
