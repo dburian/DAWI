@@ -4,7 +4,7 @@
   font-weight: bold;
   src: local("DINPro Bold"), url("/font/DINPro-Bold.woff") format("woff");
 }
-.article-heading, section {
+.section-header, .article-header, section {
   margin-bottom: 2.4305555556vw;
 }
 
@@ -15,25 +15,25 @@ article {
 body {
   font-family: "DINPro", sans-serif;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.3vw;
   margin: 0;
   padding: 0;
 }
 
 h1 {
-  font-size: 1.45rem;
+  font-size: 2.5vw;
   margin: 0;
   text-transform: uppercase;
 }
 
 h2 {
-  font-size: 1.3rem;
+  font-size: 1.8vw;
   margin: 0;
   text-transform: uppercase;
 }
 
 h3 {
-  font-size: 1.15rem;
+  font-size: 1.5vw;
   margin: 0;
   text-transform: uppercase;
 }
@@ -41,7 +41,6 @@ h3 {
 h5 {
   margin: 0;
   text-transform: uppercase;
-  font-size: 0.9rem;
 }
 
 ul, ol {
@@ -64,11 +63,6 @@ a:hover {
 
 p {
   margin: 0;
-  font-size: 0.9rem;
-}
-
-#nav-projects-dropdown {
-  display: none;
 }
 
 .l-square-grid-sized {
@@ -103,14 +97,16 @@ p {
 
 #nav {
   text-align: center;
-  height: 17.3611111111vw;
+  min-height: 17.3611111111vw;
   padding-top: 5.5555555556vw;
 }
-#nav #nav-home {
+
+#nav-home {
   color: #000000;
 }
 
 #nav-projects-dropdown {
+  display: none;
   text-align: left;
   position: relative;
   top: -0.3em;
@@ -139,8 +135,17 @@ p {
   filter: grayscale(100%);
 }
 
-.article-heading {
+.article-header {
   height: 3.4722222222vw;
+}
+
+.section-header {
+  height: 2.0833333333vw;
+}
+
+.vertical-divider {
+  height: 0.6944444444vw;
+  display: block;
 }
 
 .centered {
@@ -163,11 +168,11 @@ p {
 }
 
 .nav-list-item {
-  line-height: 50px;
+  line-height: 2em;
 }
 
 .nav-dropdown-list-item {
-  line-height: 30px;
+  line-height: 1.5em;
 }
 
 .square-view {

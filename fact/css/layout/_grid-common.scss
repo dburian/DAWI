@@ -1,7 +1,7 @@
 $main-wrapper-width: 100vw - 2*$main-wrapper-margin;
 
 $column-gutter: 35/1440 * 100vw;
-$column-width: ($main-wrapper-width - 3*$column-gutter)/4;
+$column-width: ($main-wrapper-width - (3*$column-gutter))/4;
 
 $row-gutter: 90/1440 * 100vw;
 $row-unordered-height: 370/1440 * 100vw;
