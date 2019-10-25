@@ -22,6 +22,16 @@ body {
   margin: 0;
   padding: 0;
 }
+@media screen and (min-width: 40rem) {
+  body {
+    background: blue;
+  }
+}
+@media screen and (min-width: 80rem) {
+  body {
+    background: red;
+  }
+}
 
 h1 {
   font-size: 1.3rem;

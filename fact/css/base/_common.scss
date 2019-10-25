@@ -31,6 +31,12 @@ body {
   //font-size: $font-size;
   margin: 0;
   padding: 0;
+  @media screen and (min-width: 40rem) {
+    background: blue;
+  }
+  @media screen and (min-width: 80rem) {
+    background: red;
+  }
 }
 
 h1 {
