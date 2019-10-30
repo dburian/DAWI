@@ -1,0 +1,8 @@
+// IMPORTING COMMON STYLES (MAY INCLUDE VARIABLES USED LATER)
+@import "base/common", 'layout/common', 'module/common';
+
+@import 'layout/unordered-grid',
+'layout/project-detail-grid',
+'layout/project_detail',
+'module/headers',
+'module/gallery';

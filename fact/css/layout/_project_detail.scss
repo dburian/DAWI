@@ -1,0 +1,18 @@
+#gallery {
+  grid-area: gallery;
+}
+
+#main-gallery-image {
+  width: 100%;
+}
+
+#gallery-images-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#project-text {
+  grid-area: text;
+}
+

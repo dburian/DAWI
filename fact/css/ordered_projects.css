@@ -161,6 +161,13 @@ p {
   grid-row-gap: 6.25vw;
 }
 
+.l-ordered-grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 20.9548611111vw);
+  grid-auto-rows: 22.0026041667vw;
+  grid-gap: 0;
+}
+
 .nav-list-item {
   line-height: 2em;
 }
@@ -169,23 +176,12 @@ p {
   line-height: 1.5em;
 }
 
-.square-view {
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-between;
-  justify-content: center;
-}
-
-.square-view-image {
+.rect-view-image {
   object-fit: cover;
 }
 
-.square-view-header {
-  width: 100%;
-  text-align: center;
-  height: 3.4722222222vw;
-  color: #000000;
+.rect-view-header {
+  display: none;
 }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=ordered_projects.css.map */

@@ -161,6 +161,18 @@ p {
   grid-row-gap: 6.25vw;
 }
 
+.l-2-col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2.4305555556vw;
+}
+
+#map {
+  filter: grayscale(100%);
+  width: 100%;
+  height: 100%;
+}
+
 .nav-list-item {
   line-height: 2em;
 }
@@ -169,23 +181,4 @@ p {
   line-height: 1.5em;
 }
 
-.square-view {
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-between;
-  justify-content: center;
-}
-
-.square-view-image {
-  object-fit: cover;
-}
-
-.square-view-header {
-  width: 100%;
-  text-align: center;
-  height: 3.4722222222vw;
-  color: #000000;
-}
-
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=contacts.css.map */

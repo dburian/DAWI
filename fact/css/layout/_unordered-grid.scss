@@ -1,0 +1,6 @@
+.l-unordered-grid-container {
+  @extend .l-4-col-grid-container;
+  grid-auto-rows: $row-unordered-height;
+  grid-row-gap: $row-gutter;
+}
+

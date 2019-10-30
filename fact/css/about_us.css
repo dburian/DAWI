@@ -161,6 +161,12 @@ p {
   grid-row-gap: 6.25vw;
 }
 
+.l-2-col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2.4305555556vw;
+}
+
 .nav-list-item {
   line-height: 2em;
 }
@@ -188,4 +194,4 @@ p {
   color: #000000;
 }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=about_us.css.map */

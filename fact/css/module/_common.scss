@@ -1,0 +1,33 @@
+.word-divider {
+  width: 1px;
+  line-height: 1em;
+  margin: 0.1em 1em 0.1em 1em;
+  background: $grey;
+}
+
+.grey-on-hover:hover {
+  filter: grayscale(100%);
+}
+
+.article-header {
+  @extend %has-medium-gap-after;
+  height: 50/1440 * 100vw;
+}
+
+.section-header {
+  @extend %has-medium-gap-after;
+  height: 30/1440 * 100vw;
+}
+
+.vertical-divider {
+  height: $small-gap;
+  display: block;
+}
+
+.centered {
+  text-align: center;
+}
+
+.extra-info {
+  color: $grey;
+}

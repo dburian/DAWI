@@ -1,0 +1,5 @@
+.l-2-col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: $column-gutter;
+}

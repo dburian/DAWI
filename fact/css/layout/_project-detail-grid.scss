@@ -1,0 +1,7 @@
+.l-project-detail-grid {
+  display: grid;
+  grid-column-gap: $column-gutter;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "gallery gallery gallery gallery gallery gallery gallery text text text text text";
+}

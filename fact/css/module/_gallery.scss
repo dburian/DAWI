@@ -1,0 +1,6 @@
+$img-width: 75/1440 * 100vw;
+
+.gallery-image-thumb {
+  width: $img-width;
+  margin: $img-width/15 $img-width/30 $img-width/15 $img-width/30;
+}

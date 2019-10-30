@@ -161,6 +161,31 @@ p {
   grid-row-gap: 6.25vw;
 }
 
+.l-project-detail-grid {
+  display: grid;
+  grid-column-gap: 2.4305555556vw;
+  grid-template-rows: auto;
+  grid-template-areas: "gallery gallery gallery gallery gallery gallery gallery text text text text text";
+}
+
+#gallery {
+  grid-area: gallery;
+}
+
+#main-gallery-image {
+  width: 100%;
+}
+
+#gallery-images-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#project-text {
+  grid-area: text;
+}
+
 .nav-list-item {
   line-height: 2em;
 }
@@ -169,23 +194,9 @@ p {
   line-height: 1.5em;
 }
 
-.square-view {
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-between;
-  justify-content: center;
+.gallery-image-thumb {
+  width: 5.2083333333vw;
+  margin: 0.3472222222vw 0.1736111111vw 0.3472222222vw 0.1736111111vw;
 }
 
-.square-view-image {
-  object-fit: cover;
-}
-
-.square-view-header {
-  width: 100%;
-  text-align: center;
-  height: 3.4722222222vw;
-  color: #000000;
-}
-
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=project_detail.css.map */

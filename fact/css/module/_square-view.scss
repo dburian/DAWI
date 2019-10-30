@@ -1,0 +1,22 @@
+$vertical-gutter: 18/1440 * 100%;
+$name-height: 50/1440 * 100vw;
+
+
+.square-view {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: center;
+}
+
+.square-view-image {
+  object-fit: cover;
+}
+
+.square-view-header {
+  width: 100%;
+  text-align: center;
+  height: $name-height;
+  color: $black
+}
