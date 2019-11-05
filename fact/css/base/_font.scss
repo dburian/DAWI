@@ -6,11 +6,12 @@ $_font-directory: '/font';
 //  font-weight: normal
 //  src: local('DINPro Light'), url('#{$_font-directory}/DINPro-Light tr.woff') format('woff')
 //
-//@font-face
-//  font-family: 'DINPro Medium'
-//  font-style: normal
-//  font-weight: normal
-//  src: local('DINPro Medium'), url('#{$_font-directory}/DINPro-Medium tr.woff') format('woff')
+@font-face {
+  font-family: 'DINPro Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('DINPro Medium'), url('#{$_font-directory}/DINPro-Medium tr.woff') format('woff');
+}
 
 @font-face {
   font-family: 'DINPro';
