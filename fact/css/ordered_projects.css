@@ -184,7 +184,7 @@ p {
 }
 
 .l-unordered-grid-container {
-  grid-auto-rows: 25.6944444444vw;
+  grid-auto-rows: auto;
   grid-row-gap: 6.25vw;
 }
 
