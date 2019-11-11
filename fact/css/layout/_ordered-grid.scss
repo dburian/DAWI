@@ -1,6 +1,8 @@
 .l-ordered-grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, $column-width);
-  grid-auto-rows: $row-ordered-height;
+  @extend .l-4-col-grid-container;
   grid-gap: 0;
+}
+
+.l-ordered-wrapper {
+  margin: 0 2*$column-gutter;
 }

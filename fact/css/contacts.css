@@ -92,16 +92,6 @@ p {
   margin: 0;
 }
 
-.l-square-grid-sized {
-  width: 20.9548611111vw;
-  height: 20.9548611111vw;
-}
-
-.l-rect-grid-sized {
-  width: 20.9548611111vw;
-  height: 22.0026041667vw;
-}
-
 .l-4-col-grid-container, .l-unordered-grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -111,6 +101,7 @@ p {
 .l-centered-flex-container, #footer {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 #margin-wrapper {
@@ -158,7 +149,7 @@ p {
   background: #606060;
 }
 
-.grey-on-hover:hover {
+.bw-on-hover:hover {
   filter: grayscale(100%);
 }
 
