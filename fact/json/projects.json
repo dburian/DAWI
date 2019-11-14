@@ -1,114 +1,158 @@
 [
   {
-    "name": "PUBLIC BUILDING",
-    "description": "lorem ipsum, muy bien",
+    "id": 18699,
+    "name": "APARTMENTS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum, purus sit amet volutpat tempor, nibh ex commodo risus, et malesuada turpis ex sed velit. Fusce egestas at ligula in laoreet. Donec quis neque justo. In convallis sollicitudin mauris sit amet interdum. Cras ultrices aliquam dolor et commodo. Cras quis egestas est. Duis commodo egestas sem vitae ullamcorper. Fusce in massa ultricies, varius risus ut, aliquet elit. Integer maximus semper arcu, eu convallis ex tempor et.Duis nec est libero. Maecenas condimentum massa posuere justo elementum posuere. Sed consequat commodo justo, sit amet viverra dui mattis ultrices. Curabitur porttitor libero quis diam eleifend tempor. Etiam vehicula velit vitae augue consequat, et dignissim nunc luctus. Aliquam erat volutpat. Aliquam ultrices, orci interdum pellentesque feugiat, sem sapien elementum est, vitae vestibulum elit ex id nulla. Nulla dapibus, tortor ut vulputate ultrices, orci justo tincidunt tellus, et porta risus ligula at ante.",
+    "description_small": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum, purus sit amet volutpat tempor, nibh ex commodo risus, et malesuada turpis ex sed velit. Fusce egestas at ligula in laoreet. Donec quis neque justo. In convallis sollicitudin mauris sit amet interdum. Cras ultrices aliquam dolor et commodo. Cras quis egestas est.",
     "images": [
-      "office_2018.jpg",
-      "apartments_2017.jpg"
-    ]
+      "apartments_2017.jpg",
+      "office_2017.jpg",
+      "public_2017.jpg"
+    ],
+    "architects": [
+      "Bob Johnson",
+      "Carl Mario"
+    ],
+    "year": 2017
   },
   {
-    "name": "PUBLIC BUILDING",
-    "description": "lorem ipsum, muy bien",
+    "id": 18700,
+    "name": "APARTMENTS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum, purus sit amet volutpat tempor, nibh ex commodo risus, et malesuada turpis ex sed velit. Fusce egestas at ligula in laoreet. Donec quis neque justo. In convallis sollicitudin mauris sit amet interdum. Cras ultrices aliquam dolor et commodo. Cras quis egestas est. Duis commodo egestas sem vitae ullamcorper. Fusce in massa ultricies, varius risus ut, aliquet elit. Integer maximus semper arcu, eu convallis ex tempor et.Duis nec est libero. Maecenas condimentum massa posuere justo elementum posuere. Sed consequat commodo justo, sit amet viverra dui mattis ultrices. Curabitur porttitor libero quis diam eleifend tempor. Etiam vehicula velit vitae augue consequat, et dignissim nunc luctus. Aliquam erat volutpat. Aliquam ultrices, orci interdum pellentesque feugiat, sem sapien elementum est, vitae vestibulum elit ex id nulla. Nulla dapibus, tortor ut vulputate ultrices, orci justo tincidunt tellus, et porta risus ligula at ante.",
+    "description_small": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum, purus sit amet volutpat tempor, nibh ex commodo risus, et malesuada turpis ex sed velit. Fusce egestas at ligula in laoreet. Donec quis neque justo. In convallis sollicitudin mauris sit amet interdum. Cras ultrices aliquam dolor et commodo. Cras quis egestas est.",
     "images": [
-      "office_2018.jpg",
-      "apartments_2017.jpg"
-    ]
+      "apartments_2018.jpg"
+    ],
+    "architects": [
+      "Fred Olsen",
+      "Mario Luigi"
+    ],
+    "year": 2018
   },
   {
-    "name": "PUBLIC BUILDING",
-    "description": "lorem ipsum, muy bien",
+    "id": 18701,
+    "name": "APARTMENTS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum, purus sit amet volutpat tempor, nibh ex commodo risus, et malesuada turpis ex sed velit. Fusce egestas at ligula in laoreet. Donec quis neque justo. In convallis sollicitudin mauris sit amet interdum. Cras ultrices aliquam dolor et commodo. Cras quis egestas est. Duis commodo egestas sem vitae ullamcorper. Fusce in massa ultricies, varius risus ut, aliquet elit. Integer maximus semper arcu, eu convallis ex tempor et.Duis nec est libero. Maecenas condimentum massa posuere justo elementum posuere. Sed consequat commodo justo, sit amet viverra dui mattis ultrices. Curabitur porttitor libero quis diam eleifend tempor. Etiam vehicula velit vitae augue consequat, et dignissim nunc luctus. Aliquam erat volutpat. Aliquam ultrices, orci interdum pellentesque feugiat, sem sapien elementum est, vitae vestibulum elit ex id nulla. Nulla dapibus, tortor ut vulputate ultrices, orci justo tincidunt tellus, et porta risus ligula at ante.",
+    "description_small": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum, purus sit amet volutpat tempor, nibh ex commodo risus, et malesuada turpis ex sed velit. Fusce egestas at ligula in laoreet. Donec quis neque justo. In convallis sollicitudin mauris sit amet interdum. Cras ultrices aliquam dolor et commodo. Cras quis egestas est.",
     "images": [
-      "office_2018.jpg",
-      "apartments_2017.jpg"
-    ]
+      "apartments_2019_a.jpg"
+    ],
+    "architects": [
+      "Bob Johnson",
+      "Carl Mario"
+    ],
+    "year": 2019
   },
   {
-    "name": "PUBLIC BUILDING",
-    "description": "lorem ipsum, muy bien",
+    "id": 18702,
+    "name": "APARTMENTS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum, purus sit amet volutpat tempor, nibh ex commodo risus, et malesuada turpis ex sed velit. Fusce egestas at ligula in laoreet. Donec quis neque justo. In convallis sollicitudin mauris sit amet interdum. Cras ultrices aliquam dolor et commodo. Cras quis egestas est. Duis commodo egestas sem vitae ullamcorper. Fusce in massa ultricies, varius risus ut, aliquet elit. Integer maximus semper arcu, eu convallis ex tempor et.Duis nec est libero. Maecenas condimentum massa posuere justo elementum posuere. Sed consequat commodo justo, sit amet viverra dui mattis ultrices. Curabitur porttitor libero quis diam eleifend tempor. Etiam vehicula velit vitae augue consequat, et dignissim nunc luctus. Aliquam erat volutpat. Aliquam ultrices, orci interdum pellentesque feugiat, sem sapien elementum est, vitae vestibulum elit ex id nulla. Nulla dapibus, tortor ut vulputate ultrices, orci justo tincidunt tellus, et porta risus ligula at ante.",
+    "description_small": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum, purus sit amet volutpat tempor, nibh ex commodo risus, et malesuada turpis ex sed velit. Fusce egestas at ligula in laoreet. Donec quis neque justo. In convallis sollicitudin mauris sit amet interdum. Cras ultrices aliquam dolor et commodo. Cras quis egestas est.",
     "images": [
-      "office_2018.jpg",
-      "apartments_2017.jpg"
-    ]
+      "apartments_2019_b.jpg"
+    ],
+    "architects": [
+      "Bob Johnson",
+      "Carl Mario"
+    ],
+    "year": 2019
   },
   {
-    "name": "PUBLIC BUILDING",
-    "description": "lorem ipsum, muy bien",
+    "id": 18703,
+    "name": "OFFICE",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum, purus sit amet volutpat tempor, nibh ex commodo risus, et malesuada turpis ex sed velit. Fusce egestas at ligula in laoreet. Donec quis neque justo. In convallis sollicitudin mauris sit amet interdum. Cras ultrices aliquam dolor et commodo. Cras quis egestas est. Duis commodo egestas sem vitae ullamcorper. Fusce in massa ultricies, varius risus ut, aliquet elit. Integer maximus semper arcu, eu convallis ex tempor et.Duis nec est libero. Maecenas condimentum massa posuere justo elementum posuere. Sed consequat commodo justo, sit amet viverra dui mattis ultrices. Curabitur porttitor libero quis diam eleifend tempor. Etiam vehicula velit vitae augue consequat, et dignissim nunc luctus. Aliquam erat volutpat. Aliquam ultrices, orci interdum pellentesque feugiat, sem sapien elementum est, vitae vestibulum elit ex id nulla. Nulla dapibus, tortor ut vulputate ultrices, orci justo tincidunt tellus, et porta risus ligula at ante.",
+    "description_small": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum, purus sit amet volutpat tempor, nibh ex commodo risus, et malesuada turpis ex sed velit. Fusce egestas at ligula in laoreet. Donec quis neque justo. In convallis sollicitudin mauris sit amet interdum. Cras ultrices aliquam dolor et commodo. Cras quis egestas est.",
     "images": [
-      "office_2018.jpg",
-      "apartments_2017.jpg"
-    ]
+      "office_2017.jpg"
+    ],
+    "architects": [
+      "Bob Johnson",
+      "Carl Mario"
+    ],
+    "year": 2017
   },
   {
-    "name": "PUBLIC BUILDING",
-    "description": "lorem ipsum, muy bien",
+    "id": 18704,
+    "name": "OFFICE",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum, purus sit amet volutpat tempor, nibh ex commodo risus, et malesuada turpis ex sed velit. Fusce egestas at ligula in laoreet. Donec quis neque justo. In convallis sollicitudin mauris sit amet interdum. Cras ultrices aliquam dolor et commodo. Cras quis egestas est. Duis commodo egestas sem vitae ullamcorper. Fusce in massa ultricies, varius risus ut, aliquet elit. Integer maximus semper arcu, eu convallis ex tempor et.Duis nec est libero. Maecenas condimentum massa posuere justo elementum posuere. Sed consequat commodo justo, sit amet viverra dui mattis ultrices. Curabitur porttitor libero quis diam eleifend tempor. Etiam vehicula velit vitae augue consequat, et dignissim nunc luctus. Aliquam erat volutpat. Aliquam ultrices, orci interdum pellentesque feugiat, sem sapien elementum est, vitae vestibulum elit ex id nulla. Nulla dapibus, tortor ut vulputate ultrices, orci justo tincidunt tellus, et porta risus ligula at ante.",
+    "description_small": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum, purus sit amet volutpat tempor, nibh ex commodo risus, et malesuada turpis ex sed velit. Fusce egestas at ligula in laoreet. Donec quis neque justo. In convallis sollicitudin mauris sit amet interdum. Cras ultrices aliquam dolor et commodo. Cras quis egestas est.",
     "images": [
-      "office_2018.jpg",
-      "apartments_2017.jpg"
-    ]
+      "office_2018.jpg"
+    ],
+    "architects": [
+      "Bob Johnson",
+      "Carl Mario"
+    ],
+    "year": 2018
   },
   {
-    "name": "PUBLIC BUILDING",
-    "description": "lorem ipsum, muy bien",
+    "id": 18705,
+    "name": "OFFICE",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum, purus sit amet volutpat tempor, nibh ex commodo risus, et malesuada turpis ex sed velit. Fusce egestas at ligula in laoreet. Donec quis neque justo. In convallis sollicitudin mauris sit amet interdum. Cras ultrices aliquam dolor et commodo. Cras quis egestas est. Duis commodo egestas sem vitae ullamcorper. Fusce in massa ultricies, varius risus ut, aliquet elit. Integer maximus semper arcu, eu convallis ex tempor et.Duis nec est libero. Maecenas condimentum massa posuere justo elementum posuere. Sed consequat commodo justo, sit amet viverra dui mattis ultrices. Curabitur porttitor libero quis diam eleifend tempor. Etiam vehicula velit vitae augue consequat, et dignissim nunc luctus. Aliquam erat volutpat. Aliquam ultrices, orci interdum pellentesque feugiat, sem sapien elementum est, vitae vestibulum elit ex id nulla. Nulla dapibus, tortor ut vulputate ultrices, orci justo tincidunt tellus, et porta risus ligula at ante.",
+    "description_small": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum, purus sit amet volutpat tempor, nibh ex commodo risus, et malesuada turpis ex sed velit. Fusce egestas at ligula in laoreet. Donec quis neque justo. In convallis sollicitudin mauris sit amet interdum. Cras ultrices aliquam dolor et commodo. Cras quis egestas est.",
     "images": [
-      "office_2018.jpg",
-      "apartments_2017.jpg"
-    ]
+      "office_2019.jpg"
+    ],
+    "architects": [
+      "Bob Johnson",
+      "Carl Mario"
+    ],
+    "year": 2019
   },
   {
-    "name": "PUBLIC BUILDING",
-    "description": "lorem ipsum, muy bien",
+    "id": 18706,
+    "name": "PUBLIC",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum, purus sit amet volutpat tempor, nibh ex commodo risus, et malesuada turpis ex sed velit. Fusce egestas at ligula in laoreet. Donec quis neque justo. In convallis sollicitudin mauris sit amet interdum. Cras ultrices aliquam dolor et commodo. Cras quis egestas est. Duis commodo egestas sem vitae ullamcorper. Fusce in massa ultricies, varius risus ut, aliquet elit. Integer maximus semper arcu, eu convallis ex tempor et.Duis nec est libero. Maecenas condimentum massa posuere justo elementum posuere. Sed consequat commodo justo, sit amet viverra dui mattis ultrices. Curabitur porttitor libero quis diam eleifend tempor. Etiam vehicula velit vitae augue consequat, et dignissim nunc luctus. Aliquam erat volutpat. Aliquam ultrices, orci interdum pellentesque feugiat, sem sapien elementum est, vitae vestibulum elit ex id nulla. Nulla dapibus, tortor ut vulputate ultrices, orci justo tincidunt tellus, et porta risus ligula at ante.",
+    "description_small": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum, purus sit amet volutpat tempor, nibh ex commodo risus, et malesuada turpis ex sed velit. Fusce egestas at ligula in laoreet. Donec quis neque justo. In convallis sollicitudin mauris sit amet interdum. Cras ultrices aliquam dolor et commodo. Cras quis egestas est.",
     "images": [
-      "office_2018.jpg",
-      "apartments_2017.jpg"
-    ]
+      "public_2017.jpg"
+    ],
+    "architects": [
+      "Bob Johnson",
+      "Carl Mario"
+    ],
+    "year": 2017
   },
   {
-    "name": "PUBLIC BUILDING",
-    "description": "lorem ipsum, muy bien",
+    "id": 18707,
+    "name": "PUBLIC",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum, purus sit amet volutpat tempor, nibh ex commodo risus, et malesuada turpis ex sed velit. Fusce egestas at ligula in laoreet. Donec quis neque justo. In convallis sollicitudin mauris sit amet interdum. Cras ultrices aliquam dolor et commodo. Cras quis egestas est. Duis commodo egestas sem vitae ullamcorper. Fusce in massa ultricies, varius risus ut, aliquet elit. Integer maximus semper arcu, eu convallis ex tempor et.Duis nec est libero. Maecenas condimentum massa posuere justo elementum posuere. Sed consequat commodo justo, sit amet viverra dui mattis ultrices. Curabitur porttitor libero quis diam eleifend tempor. Etiam vehicula velit vitae augue consequat, et dignissim nunc luctus. Aliquam erat volutpat. Aliquam ultrices, orci interdum pellentesque feugiat, sem sapien elementum est, vitae vestibulum elit ex id nulla. Nulla dapibus, tortor ut vulputate ultrices, orci justo tincidunt tellus, et porta risus ligula at ante.",
+    "description_small": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum, purus sit amet volutpat tempor, nibh ex commodo risus, et malesuada turpis ex sed velit. Fusce egestas at ligula in laoreet. Donec quis neque justo. In convallis sollicitudin mauris sit amet interdum. Cras ultrices aliquam dolor et commodo. Cras quis egestas est.",
     "images": [
-      "office_2018.jpg",
-      "apartments_2017.jpg"
-    ]
+      "public_2018_a.jpg"
+    ],
+    "architects": [
+      "Bob Johnson",
+      "Carl Mario"
+    ],
+    "year": 2018
   },
   {
-    "name": "PUBLIC BUILDING",
-    "description": "lorem ipsum, muy bien",
+    "id": 18708,
+    "name": "PUBLIC",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum, purus sit amet volutpat tempor, nibh ex commodo risus, et malesuada turpis ex sed velit. Fusce egestas at ligula in laoreet. Donec quis neque justo. In convallis sollicitudin mauris sit amet interdum. Cras ultrices aliquam dolor et commodo. Cras quis egestas est. Duis commodo egestas sem vitae ullamcorper. Fusce in massa ultricies, varius risus ut, aliquet elit. Integer maximus semper arcu, eu convallis ex tempor et.Duis nec est libero. Maecenas condimentum massa posuere justo elementum posuere. Sed consequat commodo justo, sit amet viverra dui mattis ultrices. Curabitur porttitor libero quis diam eleifend tempor. Etiam vehicula velit vitae augue consequat, et dignissim nunc luctus. Aliquam erat volutpat. Aliquam ultrices, orci interdum pellentesque feugiat, sem sapien elementum est, vitae vestibulum elit ex id nulla. Nulla dapibus, tortor ut vulputate ultrices, orci justo tincidunt tellus, et porta risus ligula at ante.",
+    "description_small": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum, purus sit amet volutpat tempor, nibh ex commodo risus, et malesuada turpis ex sed velit. Fusce egestas at ligula in laoreet. Donec quis neque justo. In convallis sollicitudin mauris sit amet interdum. Cras ultrices aliquam dolor et commodo. Cras quis egestas est.",
     "images": [
-      "office_2018.jpg",
-      "apartments_2017.jpg"
-    ]
+      "public_2018_b.jpg"
+    ],
+    "architects": [
+      "Bob Johnson",
+      "Carl Mario"
+    ],
+    "year": 2018
   },
   {
-    "name": "PUBLIC BUILDING",
-    "description": "lorem ipsum, muy bien",
+    "id": 18709,
+    "name": "PUBLIC",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum, purus sit amet volutpat tempor, nibh ex commodo risus, et malesuada turpis ex sed velit. Fusce egestas at ligula in laoreet. Donec quis neque justo. In convallis sollicitudin mauris sit amet interdum. Cras ultrices aliquam dolor et commodo. Cras quis egestas est. Duis commodo egestas sem vitae ullamcorper. Fusce in massa ultricies, varius risus ut, aliquet elit. Integer maximus semper arcu, eu convallis ex tempor et.Duis nec est libero. Maecenas condimentum massa posuere justo elementum posuere. Sed consequat commodo justo, sit amet viverra dui mattis ultrices. Curabitur porttitor libero quis diam eleifend tempor. Etiam vehicula velit vitae augue consequat, et dignissim nunc luctus. Aliquam erat volutpat. Aliquam ultrices, orci interdum pellentesque feugiat, sem sapien elementum est, vitae vestibulum elit ex id nulla. Nulla dapibus, tortor ut vulputate ultrices, orci justo tincidunt tellus, et porta risus ligula at ante.",
+    "description_small": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum, purus sit amet volutpat tempor, nibh ex commodo risus, et malesuada turpis ex sed velit. Fusce egestas at ligula in laoreet. Donec quis neque justo. In convallis sollicitudin mauris sit amet interdum. Cras ultrices aliquam dolor et commodo. Cras quis egestas est.",
     "images": [
-      "office_2018.jpg",
-      "apartments_2017.jpg"
-    ]
-  },
-  {
-    "name": "PUBLIC BUILDING",
-    "description": "lorem ipsum, muy bien",
-    "images": [
-      "office_2018.jpg",
-      "apartments_2017.jpg"
-    ]
-  },
-  {
-    "name": "PUBLIC BUILDING",
-    "description": "lorem ipsum, muy bien",
-    "images": [
-      "office_2018.jpg",
-      "apartments_2017.jpg"
-    ]
-  },
-  {
-    "name": "PUBLIC BUILDING",
-    "description": "lorem ipsum, muy bien",
-    "images": [
-      "office_2018.jpg",
-      "apartments_2017.jpg"
-    ]
+      "public_2019.jpg"
+    ],
+    "architects": [
+      "Bob Johnson",
+      "Carl Mario"
+    ],
+    "year": 2019
   }
 ]
