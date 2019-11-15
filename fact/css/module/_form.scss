@@ -1,0 +1,36 @@
+#form-textarea {
+  height: 120px;
+}
+
+input[type=text], input[type=email], input[type=tel], textarea {
+  margin: 8px;
+  width: 100%;
+  padding: 4px;
+}
+
+input[type=submit] {
+  margin: 8px;
+  padding: 8px 16px;
+  border: none;
+  font-size: 1rem;
+  background: transparent;
+}
+
+table, td {
+  padding-right: 32px;
+}
+
+.error-message {
+  padding-top: 4px;
+  font-size: 0.5rem;
+  color: red;
+}
+
+th {
+  float: left;
+  margin-left: 16px;
+}
+
+.red-input {
+  box-shadow: 0 0 5px red;
+}
