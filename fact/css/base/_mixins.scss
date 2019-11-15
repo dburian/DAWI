@@ -1,0 +1,54 @@
+@mixin has-part-margin-after {
+  margin-bottom: $part-margin-mobile;
+
+  @media screen and (min-width: $tablet-min-screen-width) {
+    margin-bottom: $part-margin-tablet;
+  }
+
+  @media screen and (min-width: $desktop-min-screen-width) {
+    margin-bottom: $part-margin-desktop;
+  }
+}
+
+@mixin has-section-margin-after {
+  margin-bottom: $section-margin-mobile;
+
+  @media screen and (min-width: $tablet-min-screen-width) {
+    margin-bottom: $section-margin-tablet;
+  }
+
+  @media screen and (min-width: $desktop-min-screen-width) {
+    margin-bottom: $section-margin-desktop;
+  }
+}
+
+@mixin has-article-margin-after {
+  margin-bottom: $article-margin-mobile;
+
+  @media screen and (min-width: $tablet-min-screen-width) {
+    margin-bottom: $article-margin-tablet;
+  }
+
+  @media screen and (min-width: $desktop-min-screen-width) {
+    margin-bottom: $article-margin-desktop;
+  }
+}
+
+@mixin header($level) {
+  font-weight: inherit;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: pow(1.0835, $level) * 1rem;
+}
+
+@mixin media($prop, $size-list) {
+  #{$prop}: if-unitless-return-relative-rem(nth($size-list, 1));
+
+  @media screen and (min-width: $tablet-min-screen-width) {
+    #{$prop}: if-unitless-return-relative-rem(nth($size-list, 2));
+  }
+
+  @media screen and (min-width: $desktop-min-screen-width) {
+    #{$prop}: if-unitless-return-relative-rem(nth($size-list, 3));
+  }
+}

@@ -1,3 +1,43 @@
-$big-gap: 100/1440 * 100vw;
-$medium-gap: 35/1440 * 100vw;
-$small-gap: 10/1440 * 100vw;
+$desktop-min-screen-width: 1200px;
+$tablet-min-screen-width: 600px;
+
+$desktop-screen-width: 1440px;
+$tablet-screen-width: 834px;
+$mobile-screen-width: 375px;
+
+$part-margin-desktop: get-relative-rem(120);
+$section-margin-desktop: get-relative-rem(100);
+$article-margin-desktop: get-relative-rem(60);
+
+$l-gap-desktop: get-relative-rem(60);
+$m-gap-desktop: get-relative-rem(35);
+$s-gap-desktop: get-relative-rem(20);
+$xs-gap-desktop: get-relative-rem(15);
+
+
+$part-margin-tablet: get-relative-rem(100);
+$section-margin-tablet: get-relative-rem(80);
+$article-margin-tablet: get-relative-rem(40);
+
+$l-gap-tablet: get-relative-rem(30);
+
+
+$part-margin-mobile: get-relative-rem(80);
+$section-margin-mobile: get-relative-rem(60);
+$article-margin-mobile: get-relative-rem(40);
+
+$l-gap-mobile: get-relative-rem(30);
+$m-gap-mobile: get-relative-rem(20);
+
+
+$font-family: 'DINPro', sans-serif;
+$font-weight-normal: normal;
+$font-weight-link: normal;
+
+
+$white: #fff;
+$black: #000;
+$dark-grey: #A0A0A0;
+
+$s-black: rgba(0, 0, 0, 0.85);
+$s-light-grey: rgba(173, 173, 173, 0.85);

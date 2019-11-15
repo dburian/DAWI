@@ -1,0 +1,17 @@
+.nav-list-item {
+  line-height: 2em;
+  color: $dark-grey;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+.nav-dropdown-list-item {
+  line-height: 1.5em;
+  color: $dark-grey;
+
+  &:hover {
+    color:$black;
+  }
+}

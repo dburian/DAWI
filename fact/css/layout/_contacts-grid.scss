@@ -1,0 +1,4 @@
+.l-contacts-grid-container {
+  @extend .l-project-detail-grid;
+  grid-template-areas: 'info info info info map map map map map map map map map map map map';
+}

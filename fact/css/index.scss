@@ -2,6 +2,7 @@
 @import "base/common", 'layout/common', 'module/common';
 
 @import 'layout/unordered-grid',
-'module/headers',
+'module/navigation',
 'module/thumb-common',
-'module/square-thumb';
+'module/square-thumb',
+'state/navigation';

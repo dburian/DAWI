@@ -1,0 +1,4 @@
+.l-proj-arch-grid-container {
+  @extend .l-4-col-grid-container;
+  @include media('grid-row-gap', $article-margin-mobile $article-margin-tablet $article-margin-desktop);
+}

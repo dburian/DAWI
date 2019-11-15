@@ -23,10 +23,6 @@
   padding-top: $padding-top;
 }
 
-#nav-home {
-  color: $black;
-}
-
 #nav-projects-dropdown {
   display: none;
   text-align: left;
@@ -45,8 +41,23 @@
   @extend .l-centered-flex-container;
   width: 100%;
   padding: 1em 0 1em 0;
-  color: $grey;
-  margin-top: $big-gap;
+  color: $dark-grey;
+  display: grid;
+  grid-template-areas: 'copyright separator instagram';
+  grid-template-columns: 1fr auto 1fr;
+
+  #copyright {
+    grid-area: copyright;
+    text-align: right;
+  }
+
+  .word-divider {
+    grid-area: separator;
+  }
+
+  #instagram {
+    grid-area: instagram;
+  }
 }
 
 
