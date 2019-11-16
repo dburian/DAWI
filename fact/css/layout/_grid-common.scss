@@ -1,15 +1,16 @@
-$main-wrapper-width: 100vw - 2*$main-wrapper-margin;
-
 $column-gutter: 35/1440 * 100vw;
-$column-width: ($main-wrapper-width - (3*$column-gutter))/4;
 
-$row-gutter: 90/1440 * 100vw;
-$row-unordered-height: 370/1440 * 100vw;
-
-$row-ordered-height: $column-width*1.05;
-
-.l-4-col-grid-container {
+.l-base-grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-column-gap: $column-gutter;
+  grid-template-columns: 1fr;
+
+  @media screen and (min-width: $tablet-min-screen-width){
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-column-gap: $column-gutter;
+  }
+
+  @media screen and (min-width: $desktop-min-screen-width) {
+
+  }
+
 }

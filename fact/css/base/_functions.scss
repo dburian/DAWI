@@ -3,15 +3,7 @@
 }
 
 @function get-relative-rem($px) {
-  @return strip-unit($px)/10 * 1rem;
-}
-
-@function if-unitless-return-relative-rem($value) {
-  @if unitless($value) {
-    @return get-relative-rem($value);
-  }
-
-  @return $value;
+  @return strip-unit($px)/18.1563 * 1rem;
 }
 
 @function pow($base, $exponent) {

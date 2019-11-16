@@ -20,7 +20,7 @@ $section-margin-tablet: get-relative-rem(80);
 $article-margin-tablet: get-relative-rem(40);
 
 $l-gap-tablet: get-relative-rem(30);
-
+$s-gap-tablet: get-relative-rem(15);
 
 $part-margin-mobile: get-relative-rem(80);
 $section-margin-mobile: get-relative-rem(60);
@@ -41,3 +41,4 @@ $dark-grey: #A0A0A0;
 
 $s-black: rgba(0, 0, 0, 0.85);
 $s-light-grey: rgba(173, 173, 173, 0.85);
+$s-white: rgba(255, 255, 255, 0.85);

@@ -2,8 +2,12 @@
 @import "base/common", 'layout/common', 'module/common';
 
 @import
+'layout/navigation',
+'layout/footer',
+'layout/navigation-grid',
+'layout/leader-arch-grid',
 'layout/proj-arch-grid',
-'layout/2-col-grid',
+'layout/about-grid',
 'module/navigation',
 'module/thumb-common',
 'module/square-thumb',

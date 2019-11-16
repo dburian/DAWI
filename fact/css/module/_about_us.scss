@@ -9,5 +9,5 @@
 }
 
 .proj-arch-name {
-  @extend .thick-line;
+  @include thick-line;
 }

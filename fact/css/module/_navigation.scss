@@ -1,5 +1,4 @@
-.nav-list-item {
-  line-height: 2em;
+.nav-menu-list-item {
   color: $dark-grey;
 
   &:hover {
@@ -14,4 +13,8 @@
   &:hover {
     color:$black;
   }
+}
+
+.nav-page-item {
+  display: none;
 }

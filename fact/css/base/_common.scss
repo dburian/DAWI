@@ -6,10 +6,6 @@
 .margin-clear {
   margin-bottom: 0;
 }
-
-.thick-line {
-  line-height: 3rem;
-}
 //----------------------------------
 
 html {
@@ -26,7 +22,7 @@ body {
 
 h1 {
   @include header(4);
-  @extend .thick-line;
+  @include thick-line;
 }
 
 h2 {
@@ -38,7 +34,7 @@ h3 {
 }
 
 h5 {
-  @include header(-1);
+  @include header(-2);
 }
 
 ul, ol {
@@ -62,6 +58,8 @@ p {
 
 main {
   @include has-part-margin-after;
+  width: 90%;
+  margin: auto;
 }
 
 section {

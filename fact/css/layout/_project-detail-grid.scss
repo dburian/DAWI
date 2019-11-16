@@ -1,7 +1,12 @@
 .l-project-detail-grid {
-  display: grid;
-  grid-column-gap: $column-gutter;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-areas:
-    "gallery gallery gallery gallery gallery gallery gallery gallery text text text text";
+  @media screen and (min-width: $tablet-min-screen-width){
+  }
+
+  @media screen and (min-width: $desktop-min-screen-width) {
+    display: grid;
+    grid-column-gap: $column-gutter;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+            "gallery gallery gallery gallery gallery gallery gallery gallery text text text text";
+  }
 }
