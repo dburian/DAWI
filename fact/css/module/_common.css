@@ -1,0 +1,27 @@
+.grid-container {
+    display: grid;
+    grid-row-gap: 70px;
+    aaagrid-column-gap: 5px;
+    grid-template-columns: repeat(auto-fit, 320px);
+    grid-template-rows: repeat(auto-fit, 370px);
+    font-family: "Roboto", Roboto, sans-serif;
+    font-weight: bold;
+}
+
+.grid-container img {
+    padding-bottom: 7px;
+}
+
+.grid-container ul[style] {
+    columns: 3;
+    list-style-type: none;
+}
+
+div {
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+
