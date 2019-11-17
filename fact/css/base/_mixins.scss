@@ -1,11 +1,39 @@
+/*Media queries*/
+
+@mixin handheld-only {
+  @media screen and (max-width: $desktop-min-screen-width - 1) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media screen and (min-width: $tablet-min-screen-width) and (max-width: $desktop-min-screen-width - 1) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media screen and (min-width: $tablet-min-screen-width) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media screen and (min-width: $desktop-min-screen-width) {
+    @content;
+  }
+}
+
+/*----------------------------*/
+
 @mixin has-part-margin-after {
   margin-bottom: $part-margin-mobile;
 
-  @media screen and (min-width: $tablet-min-screen-width) {
+  @include tablet-up {
     margin-bottom: $part-margin-tablet;
   }
 
-  @media screen and (min-width: $desktop-min-screen-width) {
+  @include desktop-up {
     margin-bottom: $part-margin-desktop;
   }
 }
@@ -13,11 +41,11 @@
 @mixin has-section-margin-after {
   margin-bottom: $section-margin-mobile;
 
-  @media screen and (min-width: $tablet-min-screen-width) {
+  @include tablet-up {
     margin-bottom: $section-margin-tablet;
   }
 
-  @media screen and (min-width: $desktop-min-screen-width) {
+  @include desktop-up {
     margin-bottom: $section-margin-desktop;
   }
 }
@@ -25,11 +53,11 @@
 @mixin has-article-margin-after {
   margin-bottom: $article-margin-mobile;
 
-  @media screen and (min-width: $tablet-min-screen-width) {
+  @include tablet-up {
     margin-bottom: $article-margin-tablet;
   }
 
-  @media screen and (min-width: $desktop-min-screen-width) {
+  @include desktop-up {
     margin-bottom: $article-margin-desktop;
   }
 }
@@ -42,31 +70,20 @@
 }
 
 @mixin media($prop, $values) {
-  $values_corrected: ();
+  #{$prop}: nth($values, 1);
 
-  @for $i from 1 through length($values) {
-    $value: nth($values, $i);
-
-    @if (type-of($value) == number) and unitless($value) {
-      $value: get-relative-rem($value);
-    }
-
-    $values_corrected: append($values_corrected, $value, space);
+  @include tablet-up {
+    #{$prop}: nth($values, 2);
   }
 
-
-  #{$prop}: nth($values_corrected, 1);
-
-  @media screen and (min-width: $tablet-min-screen-width) {
-    #{$prop}: nth($values_corrected, 2);
-  }
-
-  @media screen and (min-width: $desktop-min-screen-width) {
-    #{$prop}: nth($values_corrected, 3);
+  @include desktop-up {
+    #{$prop}: nth($values, 3);
   }
 }
 
 // @extend in media queries
 @mixin thick-line {
-  line-height: get-relative-rem(50);
+  line-height: 3rem;
 }
+
+

@@ -1,9 +1,33 @@
+/*Helper functions*/
+
+$_zoom-const: 0.6;
+$_width-const: 1;
+$_master-const: 0.8;
+
+
+@function get-font-size() {
+  @return calc((#{$_zoom-const} * 1rem + #{$_width-const} * 1vw) * #{$_master-const});
+}
+@function get-font-size-for($default-font-size, $screen-width) {
+  @return ($_zoom-const * strip-unit($default-font-size) + ($_width-const/100) * strip-unit($screen-width)) * $_master-const;
+}
+
+
+@function strip-unit($value) {
+  @if not unitless($value) {
+    @return $value / ($value * 0 + 1);
+  }
+
+  @return $value;
+}
+
 @function get-relative-vw($px, $screen-width) {
   @return strip-unit($px)/strip-unit($screen-width) * 100vw;
 }
 
-@function get-relative-rem($px) {
-  @return strip-unit($px)/18.1563 * 1rem;
+// Somewhat inverse to get-font-size
+@function get-relative-rem($px, $screen-width) {
+  @return 1rem * (strip-unit($px)/get-font-size-for(16px, $screen-width));
 }
 
 @function pow($base, $exponent) {
@@ -19,10 +43,3 @@
   @return $result;
 }
 
-@function strip-unit($value) {
-  @if not unitless($value) {
-    @return $value / ($value * 0 + 1);
-  }
-
-  @return $value;
-}

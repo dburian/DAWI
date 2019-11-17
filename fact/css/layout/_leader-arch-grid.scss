@@ -1,11 +1,11 @@
 .l-leader-arch-grid-container {
 
-  @media screen and (min-width: $tablet-min-screen-width) {
+  @include tablet-up {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: $column-gutter;
   }
-  @media screen and (min-width: $desktop-min-screen-width) {
+  @include desktop-up {
 
   }
 }

@@ -1,7 +1,7 @@
 #map {
   display: none;
 
-  @media screen and (min-width: $tablet-min-screen-width){
+  @include tablet-up{
     display: block;
     border: none;
     filter: grayscale(100%);
@@ -10,7 +10,7 @@
     grid-area: map;
   }
 
-  @media screen and (min-width: $desktop-min-screen-width) {
+  @include desktop-up {
     height: 100%;
   }
 }
@@ -26,7 +26,7 @@
 #contact-billing-info {
   grid-area: billing-info;
 
-  @media screen and (min-width: $tablet-min-screen-width) and (max-width: $desktop-min-screen-width) {
+  @include tablet-only {
     text-align: center;
   }
 }

@@ -10,12 +10,15 @@
   font-weight: bold;
   src: local("DINPro Bold"), url("/font/DINPro-Bold.woff") format("woff");
 }
+/*Helper functions*/
+/*Media queries*/
+/*----------------------------*/
 .margin-clear, article:last-child, section:last-child {
   margin-bottom: 0;
 }
 
 html {
-  font-size: calc((0.2rem + 2.3vw) * 0.5);
+  font-size: calc((0.6 * 1rem + 1 * 1vw) * 0.8);
 }
 
 body {
@@ -30,7 +33,7 @@ h1 {
   margin: 0;
   text-transform: uppercase;
   font-size: 1.3782108438rem;
-  line-height: 2.7538650496rem;
+  line-height: 3rem;
 }
 
 h2 {
@@ -74,50 +77,78 @@ p {
 }
 
 main {
-  margin-bottom: 4.4061840794rem;
-  width: 90%;
-  margin: auto;
+  margin-bottom: 7.4906367041rem;
+  margin-top: 6.5543071161rem;
+  padding-top: 2.808988764rem;
 }
 @media screen and (min-width: 600px) {
   main {
-    margin-bottom: 5.5077300992rem;
+    margin-bottom: 6.9676700111rem;
   }
 }
 @media screen and (min-width: 1200px) {
   main {
-    margin-bottom: 6.609276119rem;
+    margin-bottom: 6.25rem;
+  }
+}
+@media screen and (max-width: 1199px) {
+  main {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 600px) {
+  main {
+    margin-top: 5.5741360089rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 600px) {
+  main {
+    padding-top: 5.5741360089rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main {
+    padding-top: 0;
   }
 }
 
 section {
-  margin-bottom: 3.3046380595rem;
+  margin-bottom: 5.6179775281rem;
 }
 @media screen and (min-width: 600px) {
   section {
-    margin-bottom: 4.4061840794rem;
+    margin-bottom: 5.5741360089rem;
   }
 }
 @media screen and (min-width: 1200px) {
   section {
-    margin-bottom: 5.5077300992rem;
+    margin-bottom: 5.2083333333rem;
   }
 }
 article {
-  margin-bottom: 2.2030920397rem;
+  margin-bottom: 3.7453183521rem;
 }
 @media screen and (min-width: 600px) {
   article {
-    margin-bottom: 2.2030920397rem;
+    margin-bottom: 2.7870680045rem;
   }
 }
 @media screen and (min-width: 1200px) {
   article {
-    margin-bottom: 3.3046380595rem;
+    margin-bottom: 3.125rem;
   }
 }
 .l-base-grid-container, .l-ordered-grid-container, .l-unordered-grid-container, .l-navigation-grid-container {
   display: grid;
   grid-template-columns: 1fr;
+  /*Right before there is a fifth column*/
 }
 @media screen and (min-width: 600px) {
   .l-base-grid-container, .l-ordered-grid-container, .l-unordered-grid-container, .l-navigation-grid-container {
@@ -125,10 +156,23 @@ article {
     grid-column-gap: 2.4305555556vw;
   }
 }
+@media screen and (min-width: 1263px) {
+  .l-base-grid-container, .l-ordered-grid-container, .l-unordered-grid-container, .l-navigation-grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
 .l-centered-flex-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+@media screen and (min-width: 1200px) {
+  #wrapper {
+    width: 90%;
+    margin: auto;
+  }
 }
 
 .word-divider {
@@ -142,16 +186,16 @@ article {
 }
 
 .section-header {
-  margin-bottom: 2.2030920397rem;
+  margin-bottom: 3.7453183521rem;
 }
 @media screen and (min-width: 600px) {
   .section-header {
-    margin-bottom: 2.2030920397rem;
+    margin-bottom: 2.7870680045rem;
   }
 }
 @media screen and (min-width: 1200px) {
   .section-header {
-    margin-bottom: 3.3046380595rem;
+    margin-bottom: 3.125rem;
   }
 }
 
@@ -159,46 +203,46 @@ article {
   text-align: center;
 }
 
-#nav {
-  background: rgba(0, 0, 0, 0.85);
-  color: rgba(173, 173, 173, 0.85);
-  height: 7.7108221389rem;
-  line-height: 7.7108221389rem;
-}
-#nav #nav-active-page {
-  height: 100%;
-}
-#nav #nav-active-page #menu-icon {
-  float: right;
-  height: 60%;
-  position: relative;
-  top: 50%;
-  transform: translate(0, -50%);
-  margin-right: 1.3769325248rem;
-}
-#nav #nav-active-page #nav-active-page-list {
-  float: left;
-  display: inline-block;
-  margin-left: 1.9277055347rem;
-}
-#nav #nav-menu {
-  display: none;
-}
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 1199px) {
   #nav {
-    height: 4.4061840794rem;
-    line-height: 4.4061840794rem;
+    background: rgba(0, 0, 0, 0.85);
+    color: rgba(173, 173, 173, 0.85);
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  #nav #nav-active-page {
+    display: block;
+    height: 6.5543071161rem;
+  }
+  #nav #nav-active-page #nav-active-page-list {
+    float: left;
+    display: inline-block;
+    padding-top: 1.872659176rem;
+    margin-left: 3.2771535581rem;
+  }
+  #nav #nav-menu {
+    display: none;
+    height: 100vh;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1199px) {
+  #nav #nav-active-page {
+    height: 5.5741360089rem;
+  }
+  #nav #nav-active-page #nav-active-page-list {
+    padding-top: 1.0451505017rem;
+    margin-left: 4.1806020067rem;
   }
 }
 @media screen and (min-width: 1200px) {
   #nav {
-    background: #fff;
-    color: #A0A0A0;
-    height: auto;
     text-align: center;
-    padding-bottom: 6.609276119rem;
-    margin-bottom: 6.609276119rem;
-    padding-top: 5.5077300992rem;
+    padding-bottom: 6.25rem;
+    margin-bottom: 6.25rem;
+    padding-top: 5.2083333333rem;
   }
   #nav #nav-active-page {
     display: none;
@@ -229,34 +273,34 @@ article {
   display: none;
 }
 #footer #instagram {
-  margin-bottom: 3.3046380595rem;
+  margin-bottom: 5.6179775281rem;
 }
 @media screen and (min-width: 600px) {
   #footer #instagram {
-    margin-bottom: 2.2030920397rem;
+    margin-bottom: 2.7870680045rem;
   }
 }
 @media screen and (min-width: 1200px) {
   #footer #instagram {
-    margin-bottom: 0rem;
+    margin-bottom: 0;
   }
 }
 #footer #copyright {
-  margin-bottom: 1.1015460198rem;
+  margin-bottom: 1.872659176rem;
 }
 @media screen and (min-width: 600px) {
   #footer #copyright {
-    margin-bottom: 0.8261595149rem;
+    margin-bottom: 1.0451505017rem;
   }
 }
 @media screen and (min-width: 1200px) {
   #footer #copyright {
-    margin-bottom: 0rem;
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1200px) {
   #footer {
-    line-height: 2.7538650496rem;
+    line-height: 3rem;
     text-align: left;
     display: grid;
     grid-template-areas: "copyright divider instagram";
@@ -277,16 +321,16 @@ article {
 
 .l-unordered-grid-container {
   grid-auto-rows: auto;
-  grid-row-gap: 3.3046380595rem;
+  grid-row-gap: 5.6179775281rem;
 }
 @media screen and (min-width: 600px) {
   .l-unordered-grid-container {
-    grid-row-gap: 4.4061840794rem;
+    grid-row-gap: 5.5741360089rem;
   }
 }
 @media screen and (min-width: 1200px) {
   .l-unordered-grid-container {
-    grid-row-gap: 5.5077300992rem;
+    grid-row-gap: 5.2083333333rem;
   }
 }
 
@@ -315,6 +359,23 @@ article {
 
 .nav-page-item {
   display: none;
+}
+
+@media screen and (max-width: 1199px) {
+  .nav-icon {
+    float: right;
+    position: relative;
+    height: 2.808988764rem;
+    margin-right: 2.34082397rem;
+    margin-top: 1.872659176rem;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1199px) {
+  .nav-icon {
+    height: 2.4386845039rem;
+    margin-right: 5.5741360089rem;
+    margin-top: 1.6025641026rem;
+  }
 }
 
 .max-volume {

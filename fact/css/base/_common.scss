@@ -1,5 +1,5 @@
 @import 'font';
-@import 'functions','variables','mixins';
+@import 'hardcoded-variables', 'functions', 'computed-variables','mixins';
 
 
 //----------------------------------Move to modules after @use is supported
@@ -9,7 +9,7 @@
 //----------------------------------
 
 html {
-  font-size: calc((0.2rem + 2.3vw) * 0.5);
+  font-size: get-font-size();
 }
 
 body {
@@ -58,8 +58,15 @@ p {
 
 main {
   @include has-part-margin-after;
-  width: 90%;
-  margin: auto;
+
+  @include handheld-only {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include media('margin-top', get-relative-rem(70, $mobile-screen-width) $section-margin-tablet 0);
+  @include media('padding-top', $l-gap-mobile $section-margin-tablet 0);
 }
 
 section {

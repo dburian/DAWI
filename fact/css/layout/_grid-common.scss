@@ -1,16 +1,22 @@
 $column-gutter: 35/1440 * 100vw;
+$min-img-width: 200px;
 
 .l-base-grid-container {
   display: grid;
   grid-template-columns: 1fr;
 
-  @media screen and (min-width: $tablet-min-screen-width){
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  @include tablet-up{
+    grid-template-columns: repeat(auto-fit, minmax($min-img-width, 1fr));
     grid-column-gap: $column-gutter;
   }
 
-  @media screen and (min-width: $desktop-min-screen-width) {
+  @include desktop-up {
 
+  }
+
+  /*Right before there is a fifth column*/
+  @media screen and (min-width: 1263px){
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
 }

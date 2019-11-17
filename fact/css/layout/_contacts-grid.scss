@@ -7,7 +7,7 @@
           "reach-us"
           "billing-info";
 
-  @media screen and (min-width: $tablet-min-screen-width){
+  @include tablet-up{
     grid-template-columns: 1fr 1fr;
     grid-column-gap: $article-margin-tablet;
     grid-row-gap: $section-margin-tablet;
@@ -17,7 +17,7 @@
       "billing-info billing-info";
   }
 
-  @media screen and (min-width: $desktop-min-screen-width) {
+  @include desktop-up {
     grid-column-gap: $column-gutter;
     grid-template-columns: repeat(12, 1fr);
     grid-row-gap: $article-margin-desktop;

@@ -1,9 +1,16 @@
-@import '../base/variables', 'grid-common';
+@import '../base/computed-variables', 'grid-common';
 
 .l-centered-flex-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+#wrapper {
+  @include desktop-up {
+    width: 90%;
+    margin: auto;
+  }
 }
 
 

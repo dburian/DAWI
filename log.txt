@@ -81,4 +81,20 @@
 	It ocurred to me, that the team production would benefit from unified CSS system. So from now on I think we should use SCSS files for styling. It is the same principle as SASS, but the grammar of the syntax is superset of plain CSS grammar. In other words you would be able to write plain old CSS and when you feel like you mastered the syntax and understand it you would be able to utilize all those features SCSS provides.
 
 2.11.2019 - Relative unit (dburian)
-Ok so after digging around I realized that I overcomplicated things. Amazingly and surprisingly media queries based on screen width in pixels react to page zoom. This changes things dramatically as I thought that this will have to be done using those relative units. So a new plan...font sizes in calc(rem+vw) and everything else can be dependent on whatever. We just have to make sure that all screen widths work. Browser is going to take care of the zoom issue.
+	Ok so after digging around I realized that I overcomplicated things. Amazingly and surprisingly media queries based on screen width in pixels react to page zoom. This changes things dramatically as I thought that this will have to be done using those relative units. So a new plan...font sizes in calc(rem+vw) and everything else can be dependent on whatever. We just have to make sure that all screen widths work. Browser is going to take care of the zoom issue.
+
+17.11.2019 - Px to rem to px (dburian)
+	So the computations of pixels from design to rems in css to px in browser were getting kind of complicated so I decided to describe them here.
+	In short there are free unit spaces. Pixels in design space, Rems in scss files and pixels in browser space. Because we defined our own function to translate number of rems into number of pixels in browser, computing one unit into another is not straight forward. First lets look at the second translation:
+
+	1) rems -> pxs in browser (function g)
+		This function is dependent on two things...the default rem setting (set by browser on zoom) and width of the screen. That way the font-size changes with screen width and enabling zooming at the same time. This also allows us to tinker with how much the font size changes on zoom.
+	2) pxs in design -> rems (function f)
+		This was the unknown function. But after giving it a though I realized it is actually g^-1. The simple thing we want to achieve is that when an element is X pxs wide in design, it should be wide X pxs in browser when the screen is the same size as in design and the zoom is 100%. So actually f needs to compute how many rems is X pxs with screen size of Y and with default font size of 16px (default for strong majority  of browsers). This is exactly what g^-1 computes.
+
+	The actual computations:
+		1) function g 
+			g is tinkered with constantly, but in its essence it is just linear function with some constants. So the number of rems is just multiplied by a number (C) thats dependent on screen width and default font size.
+		2) function f
+			f uses the same computations as g, only it divides the number of pixels by that number C.
+

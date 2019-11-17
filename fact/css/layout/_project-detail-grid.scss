@@ -1,8 +1,9 @@
 .l-project-detail-grid {
-  @media screen and (min-width: $tablet-min-screen-width){
+  @include tablet-up {
+
   }
 
-  @media screen and (min-width: $desktop-min-screen-width) {
+  @include desktop-up {
     display: grid;
     grid-column-gap: $column-gutter;
     grid-template-columns: repeat(12, 1fr);

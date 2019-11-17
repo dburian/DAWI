@@ -1,11 +1,11 @@
 .l-proj-arch-grid-container {
   @extend .l-base-grid-container;
 
-  @media screen and (min-width: $tablet-min-screen-width){
+  @include tablet-up{
 
   }
 
-  @media screen and (min-width: $desktop-min-screen-width) {
+  @include desktop-up {
     @include media('grid-row-gap', $article-margin-mobile $article-margin-tablet $article-margin-desktop);
   }
 

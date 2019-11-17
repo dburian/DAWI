@@ -1,5 +1,5 @@
 .contacts-article-header {
-  @media screen and (min-width: $desktop-min-screen-width) {
+  @include desktop-up {
     @include header(3);
     line-height: normal;
   }
