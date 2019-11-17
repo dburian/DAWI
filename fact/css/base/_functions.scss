@@ -1,0 +1,28 @@
+@function get-relative-vw($px, $screen-width) {
+  @return strip-unit($px)/strip-unit($screen-width) * 100vw;
+}
+
+@function get-relative-rem($px) {
+  @return strip-unit($px)/18.1563 * 1rem;
+}
+
+@function pow($base, $exponent) {
+  $result: 1;
+  @if $exponent < 0 {
+    $exponent: abs($exponent);
+    $base: 1/$base;
+  }
+
+  @for $_ from 1 through $exponent {
+    $result: $result * $base;
+  }
+  @return $result;
+}
+
+@function strip-unit($value) {
+  @if not unitless($value) {
+    @return $value / ($value * 0 + 1);
+  }
+
+  @return $value;
+}

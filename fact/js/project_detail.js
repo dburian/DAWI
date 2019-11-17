@@ -3,19 +3,28 @@ $(document).ready(function(){
 });
 
 function updateDetails(){
-    $("#images-list").empty();
-    $("#project-text-first").empty();
+    $("#gallery").empty();
+    $("#project-text").empty();
     $.getJSON("json/projects.json","",function(json){
         var obj = getObjects(json,"id",getUrlParameter("id"));
         for(var i = 0; i < obj[0].images.length; i++) {
-            $('#images-list').append(
-                $('<p/>')
-                    .append($('<img/>')
+            $('#gallery').append(
+                    $('<img/>')
                         .attr("src", 'images/' + obj[0].images[i])
                         .attr("alt", "here should be a picture")
-                    ));
+                        .addClass("gallery-image")
+                    );
         }
-        $('#project-text-first').append(obj[0].description);
+        $('#project-text')
+            .append(
+                $('<h2/>')
+                    .addClass("section-header")
+                    .text(obj[0].name)
+            )
+            .append(
+                $('<p/>')
+                    .text(obj[0].description)
+            )
     });
 }
 

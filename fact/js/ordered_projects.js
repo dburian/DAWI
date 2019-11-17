@@ -3,6 +3,7 @@ $(document).ready(function(){
 });
 
 function updatePage() {
+    $("#list_2016").empty();
     $("#list_2017").empty();
     $("#list_2018").empty();
     $("#list_2019").empty();
@@ -32,7 +33,7 @@ function updatePage() {
                                         )
                                         .append(
                                             $('<h3/>')
-                                                .addClass("rect-view-header")
+                                                .addClass("rect-thumb-header")
                                                 .text('"' + this.name + '"')
                                         )
                                 )

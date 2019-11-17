@@ -1,0 +1,13 @@
+.leader-arch-thumb-wrapper {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.leader-arch-desc {
+  width: 85%;
+  margin: auto;
+}
+
+.proj-arch-name {
+  @include thick-line;
+}

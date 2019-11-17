@@ -1,0 +1,12 @@
+.l-proj-arch-grid-container {
+  @extend .l-base-grid-container;
+
+  @media screen and (min-width: $tablet-min-screen-width){
+
+  }
+
+  @media screen and (min-width: $desktop-min-screen-width) {
+    @include media('grid-row-gap', $article-margin-mobile $article-margin-tablet $article-margin-desktop);
+  }
+
+}

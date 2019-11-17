@@ -1,0 +1,72 @@
+@mixin has-part-margin-after {
+  margin-bottom: $part-margin-mobile;
+
+  @media screen and (min-width: $tablet-min-screen-width) {
+    margin-bottom: $part-margin-tablet;
+  }
+
+  @media screen and (min-width: $desktop-min-screen-width) {
+    margin-bottom: $part-margin-desktop;
+  }
+}
+
+@mixin has-section-margin-after {
+  margin-bottom: $section-margin-mobile;
+
+  @media screen and (min-width: $tablet-min-screen-width) {
+    margin-bottom: $section-margin-tablet;
+  }
+
+  @media screen and (min-width: $desktop-min-screen-width) {
+    margin-bottom: $section-margin-desktop;
+  }
+}
+
+@mixin has-article-margin-after {
+  margin-bottom: $article-margin-mobile;
+
+  @media screen and (min-width: $tablet-min-screen-width) {
+    margin-bottom: $article-margin-tablet;
+  }
+
+  @media screen and (min-width: $desktop-min-screen-width) {
+    margin-bottom: $article-margin-desktop;
+  }
+}
+
+@mixin header($level) {
+  font-weight: inherit;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: pow(1.0835, $level) * 1rem;
+}
+
+@mixin media($prop, $values) {
+  $values_corrected: ();
+
+  @for $i from 1 through length($values) {
+    $value: nth($values, $i);
+
+    @if (type-of($value) == number) and unitless($value) {
+      $value: get-relative-rem($value);
+    }
+
+    $values_corrected: append($values_corrected, $value, space);
+  }
+
+
+  #{$prop}: nth($values_corrected, 1);
+
+  @media screen and (min-width: $tablet-min-screen-width) {
+    #{$prop}: nth($values_corrected, 2);
+  }
+
+  @media screen and (min-width: $desktop-min-screen-width) {
+    #{$prop}: nth($values_corrected, 3);
+  }
+}
+
+// @extend in media queries
+@mixin thick-line {
+  line-height: get-relative-rem(50);
+}

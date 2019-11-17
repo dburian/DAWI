@@ -1,0 +1,20 @@
+.nav-menu-list-item {
+  color: $dark-grey;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+.nav-dropdown-list-item {
+  line-height: 1.5em;
+  color: $dark-grey;
+
+  &:hover {
+    color:$black;
+  }
+}
+
+.nav-page-item {
+  display: none;
+}

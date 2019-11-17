@@ -1,6 +1,6 @@
 .l-unordered-grid-container {
-  @extend .l-4-col-grid-container;
+  @extend .l-base-grid-container;
   grid-auto-rows: auto;
-  grid-row-gap: $row-gutter;
+  @include media('grid-row-gap', $section-margin-mobile $section-margin-tablet $section-margin-desktop);
 }
 

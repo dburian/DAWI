@@ -12,6 +12,10 @@
   flex-wrap: wrap;
 }
 
+#proj-detail-thumb {
+  @include media('display', block block none);
+}
+
 #project-text {
   grid-area: text;
 }
