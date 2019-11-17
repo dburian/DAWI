@@ -47,12 +47,12 @@
 	something that is a small part of a web page and using id, would limit us to not using that small part again. On the other hand when laying out the main parts of the webpage,
 	like the main wrapper or main content, we rely on the fact that there is only one main content or wrapper, therefore we use an id. But there is a catch. Often we see a reapeating layout
 	so we would like to use a class, because it is likely that we would like to use it on the same page. So... the convention proposal is following...
-		element-type		-> base style 
+		element-type		-> base style
 		#id 			-> layout style
 		.l-layout-name 		-> repeating layout style
 		.class-name 		-> module style
 		.is-state-class-name	-> state style
-	
+
 	btw if you are wondering from where did I get this info it's here:
 		https://learn.shayhowe.com/advanced-html-css/performance-organization/
 		(and also the smacss website)
@@ -74,11 +74,11 @@
 	. To use BS we would need another skill set we do not have
 	. BS is too heavy for our needs (the site should be lean, fast and minimal)
 	. BS uses flexbox (and maybe javascript? - not 100% sure) for it's grid system, when actually CSS grid is all we need
-	
+
 	So note to ourselves: If somewhere in the future we would like to incorporate BS please do not. These reasons should apply for the whole development process. In adittion this gives us opportunity to learn responsive design.
 
 19.10.2019 - Using SCSS (dburian)
 	It ocurred to me, that the team production would benefit from unified CSS system. So from now on I think we should use SCSS files for styling. It is the same principle as SASS, but the grammar of the syntax is superset of plain CSS grammar. In other words you would be able to write plain old CSS and when you feel like you mastered the syntax and understand it you would be able to utilize all those features SCSS provides.
 
-	
-
+2.11.2019 - Relative unit (dburian)
+Ok so after digging around I realized that I overcomplicated things. Amazingly and surprisingly media queries based on screen width in pixels react to page zoom. This changes things dramatically as I thought that this will have to be done using those relative units. So a new plan...font sizes in calc(rem+vw) and everything else can be dependent on whatever. We just have to make sure that all screen widths work. Browser is going to take care of the zoom issue.

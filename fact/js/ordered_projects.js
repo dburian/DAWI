@@ -16,12 +16,19 @@ function updatePage() {
                                 .attr("href", "project_detail.html?id=" + this.id)
                                 .append(
                                     $('<div>')
-                                        .addClass("rect-view grey-on-hover")
+                                        .addClass("rect-thumb bw-on-hover")
                                         .append(
-                                            $('<img/>')
-                                                .attr("src", "images/" + this.images[0])
-                                                .attr("alt", '"' + this.name + '"')
-                                                .addClass("rect-view-image l-rect-grid-sized")
+                                            $('<div>')
+                                                .addClass("rect-shape")
+                                                .append(
+                                                    $('<div>')
+                                                        .addClass("max-volume")
+                                                        .append(
+                                                            $('<img/>')
+                                                                .attr("src", "images/" + this.images[0])
+                                                                .addClass("thumb-image")
+                                                        )
+                                                )
                                         )
                                         .append(
                                             $('<h3/>')
@@ -34,16 +41,18 @@ function updatePage() {
         })
     });
 }
-
-
 /*
                         <li>
                             <a href="project_detail.html">
-                                <div class="rect-view grey-on-hover">
-                                    <img src="images/apartments_2019_a.jpg"
-                                         alt="Public building"
-                                         class="rect-view-image l-rect-grid-sized" />
-                                    <h3 class="rect-view-header">Public building</h3>
+                                <div class="rect-thumb bw-on-hover">
+                                    <div class="rect-shape">
+                                        <div class="max-volume">
+                                            <img src="images/apartments_2019_a.jpg"
+                                                 class="thumb-image"/>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="rect-thumb-header">Public building</h3>
                                 </div>
                             </a>
                         </li>*/

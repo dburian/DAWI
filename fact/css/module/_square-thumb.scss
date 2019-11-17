@@ -1,0 +1,23 @@
+$vertical-gutter: 18/1440 * 100%;
+$name-height: 50/1440 * 100vw;
+
+
+.square-thumb {
+
+  .square-shape {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+  }
+
+
+  .square-thumb-header {
+    width: 100%;
+    text-align: center;
+    height: 2em;
+    color: $black;
+    margin-top:0.7em;
+  }
+}
+
