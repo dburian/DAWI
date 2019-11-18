@@ -341,7 +341,7 @@ article {
     grid-column-gap: 2.4305555556vw;
     grid-template-columns: repeat(12, 1fr);
     grid-row-gap: 3.125rem;
-    grid-template-areas: "branches branches branches branches map map map map map map map map map map map map" "reach-us reach-us reach-us reach-us map map map map map map map map map map map map" "billing-info billing-info billing-info billing-info map map map map map map map map map map map map";
+    grid-template-areas: "branches branches branches branches map map map map map map map map" "reach-us reach-us reach-us reach-us map map map map map map map map" "billing-info billing-info billing-info billing-info map map map map map map map map";
   }
 }
 

@@ -22,9 +22,9 @@
     grid-template-columns: repeat(12, 1fr);
     grid-row-gap: $article-margin-desktop;
     grid-template-areas:
-            'branches branches branches branches map map map map map map map map map map map map'
-            'reach-us reach-us reach-us reach-us map map map map map map map map map map map map'
-            'billing-info billing-info billing-info billing-info map map map map map map map map map map map map';
+            'branches branches branches branches map map map map map map map map'
+            'reach-us reach-us reach-us reach-us map map map map map map map map'
+            'billing-info billing-info billing-info billing-info map map map map map map map map';
   }
 
 
