@@ -203,6 +203,10 @@ p {
   height: 120px;
 }
 
+#contact-form {
+  padding-top: 32px;
+}
+
 input[type=text], input[type=email], input[type=tel], textarea {
   margin: 8px;
   width: 100%;
