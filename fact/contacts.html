@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>FACT</title>
     <link rel="stylesheet" type="text/css" href="css/contacts.css">
+    <link rel="stylesheet" type="text/css" href="css/">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="js/contact_form.js"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -119,6 +122,45 @@
 
         <iframe id="map" src="https://www.google.com/maps/d/embed?mid=1t9l0eKbjK-zqoXbCLD1VOYmHt682xpW0"></iframe>
     </main>
+
+    <form id="contact-form">
+        <table>
+            <tr>
+                <th colspan="3">
+                    <h3>Contact form</h3>
+                </th>
+            </tr>
+            <tr>
+                <td><input id="form-first-name" type="text" placeholder="*First name"></td>
+                <td><input id="form-last-name" type="text" placeholder="*Last name"></td>
+                <td class="error-message" colspan="1"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input id="form-email" type="text" placeholder="*Email"></td>
+                <td class="error-message" colspan="1"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input id="form-email-again" type="text" placeholder="*Repeat your email">
+                </td>
+                <td class="error-message" colspan="1"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input id="form-phone" class="phone-input" type="tel" placeholder="Phone number">
+                </td>
+                <td class="error-message" colspan="1"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="text" placeholder="Subject" maxlength="60"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><textarea id="form-textarea" placeholder="Write a comment..."></textarea></td>
+                <td class="error-message" colspan="1"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Send"></td>
+            </tr>
+        </table>
+    </form>
 
     <footer id="footer">
         <div id="instagram">
