@@ -1,11 +1,14 @@
+@use '../base/mixins' as mix;
+@use 'grid-variables' as g-vars;
+
 .l-leader-arch-grid-container {
 
-  @include tablet-up {
+  @include mix.tablet-up {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: $column-gutter;
+    grid-column-gap: g-vars.$column-gutter;
   }
-  @include desktop-up {
+  @include mix.desktop-up {
 
   }
 }

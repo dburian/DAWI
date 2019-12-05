@@ -1,9 +1,12 @@
+@use '../base/mixins' as mix;
+@use 'grid-variables' as *;
+
 .l-project-detail-grid {
-  @include tablet-up {
+  @include mix.tablet-up {
 
   }
 
-  @include desktop-up {
+  @include mix.desktop-up {
     display: grid;
     grid-column-gap: $column-gutter;
     grid-template-columns: repeat(12, 1fr);

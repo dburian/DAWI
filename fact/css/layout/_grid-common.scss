@@ -1,16 +1,16 @@
-$column-gutter: 35/1440 * 100vw;
-$min-img-width: 200px;
+@use 'grid-variables' as g-vars;
+@use '../base/mixins' as mix;
 
 .l-base-grid-container {
   display: grid;
   grid-template-columns: 1fr;
 
-  @include tablet-up{
-    grid-template-columns: repeat(auto-fit, minmax($min-img-width, 1fr));
-    grid-column-gap: $column-gutter;
+  @include mix.tablet-up{
+    grid-template-columns: repeat(auto-fit, minmax(g-vars.$min-img-width, 1fr));
+    grid-column-gap: g-vars.$column-gutter;
   }
 
-  @include desktop-up {
+  @include mix.desktop-up {
 
   }
 

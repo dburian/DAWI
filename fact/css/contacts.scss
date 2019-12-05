@@ -1,14 +1,10 @@
-// IMPORTING COMMON STYLES (MAY INCLUDE VARIABLES USED LATER)
-@import "base/common", 'layout/common', 'module/common';
-
-@import
-'layout/navigation',
-'layout/footer',
-'layout/navigation-grid',
-'layout/project-detail-grid',
-'layout/contacts-grid',
-'layout/contacts',
-'module/navigation',
-'module/contacts',
-'module/_form',
-'state/navigation';
+@use 'base/common' as *;
+@use 'layout/common' as *;
+@use 'layout/navigation'as * ;
+@use 'layout/footer'as * ;
+@use 'layout/navigation-grid'as * ;
+@use 'layout/contacts-grid'as * ;
+@use 'layout/contacts'as * ;
+@use 'module/navigation' as * ;
+@use 'module/contacts' as * ;
+@use 'state/navigation' as * ;

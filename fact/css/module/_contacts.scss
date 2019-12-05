@@ -1,14 +1,17 @@
+@use '../base/mixins' as mix;
+@use '../base/variables' as *;
+
 .contacts-article-header {
-  @include desktop-up {
-    @include header(3);
+  @include mix.desktop-up {
+    @include mix.header(3);
     line-height: normal;
   }
 
-  @include media('margin-bottom', $article-margin-mobile $l-gap-tablet $s-gap-desktop);
+  @include mix.media('margin-bottom', $article-margin-mobile $l-gap-tablet $s-gap-desktop);
 }
 
 .contacts-article-list-item {
-  @include media('margin-bottom', $l-gap-mobile $l-gap-tablet $xs-gap-desktop);
+  @include mix.media('margin-bottom', $l-gap-mobile $l-gap-tablet $xs-gap-desktop);
 
   &:last-child {
     margin-bottom: 0;

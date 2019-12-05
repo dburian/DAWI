@@ -1,4 +1,7 @@
 # Ignoring webstorm project files
-
 .idea
+
+#Ignoring css and css.map files
+**/*.css
+**/*.css.map
 

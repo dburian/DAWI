@@ -1,4 +1,4 @@
-@import '../base/computed-variables', 'grid-common';
+@use '../base/mixins' as mix;
 
 .l-centered-flex-container {
   display: flex;
@@ -7,7 +7,7 @@
 }
 
 #wrapper {
-  @include desktop-up {
+  @include mix.desktop-up {
     width: 90%;
     margin: auto;
   }

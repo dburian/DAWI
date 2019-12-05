@@ -1,3 +1,7 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as mix;
+@use '../base/functions' as func;
+
 .nav-menu-list-item {
   color: $dark-grey;
 
@@ -20,17 +24,17 @@
 }
 
 .nav-icon {
-  @include handheld-only {
+  @include mix.handheld-only {
     float: right;
     position: relative;
-    height: get-relative-rem(30, $mobile-screen-width);
-    margin-right: get-relative-rem(25, $mobile-screen-width);
-    margin-top: get-relative-rem(20, $mobile-screen-width);
+    height: func.get-relative-rem(30, $mobile-screen-width);
+    margin-right: func.get-relative-rem(25, $mobile-screen-width);
+    margin-top: func.get-relative-rem(20, $mobile-screen-width);
   }
 
-  @include tablet-only {
-    height: get-relative-rem(35, $tablet-screen-width);
+  @include mix.tablet-only {
+    height: func.get-relative-rem(35, $tablet-screen-width);
     margin-right: $section-margin-tablet;
-    margin-top: get-relative-rem(23, $tablet-screen-width);
+    margin-top: func.get-relative-rem(23, $tablet-screen-width);
   }
 }

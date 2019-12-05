@@ -1,40 +1,35 @@
-@import 'font';
-@import 'hardcoded-variables', 'functions', 'computed-variables','mixins';
-
-
-//----------------------------------Move to modules after @use is supported
-.margin-clear {
-  margin-bottom: 0;
-}
-//----------------------------------
+@use 'variables' as vars;
+@use 'functions' as func;
+@use 'mixins' as mix;
+@use '../module/common';
 
 html {
-  font-size: get-font-size();
+  font-size: func.get-font-size();
 }
 
 body {
-  font-family: $font-family;
-  font-weight: $font-weight-normal;
+  font-family: vars.$font-family;
+  font-weight: vars.$font-weight-normal;
   margin: 0;
   padding: 0;
 
 }
 
 h1 {
-  @include header(4);
-  @include thick-line;
+  @include mix.header(4);
+  @include mix.thick-line;
 }
 
 h2 {
-  @include header(2);
+  @include mix.header(2);
 }
 
 h3 {
-  @include header(1);
+  @include mix.header(1);
 }
 
 h5 {
-  @include header(-2);
+  @include mix.header(-2);
 }
 
 ul, ol {
@@ -45,11 +40,11 @@ ul, ol {
 
 a {
   text-decoration: none;
-  color: $black;
+  color: vars.$black;
   cursor: pointer;
   width: 100%;
   height: 100%;
-  font-weight: $font-weight-link;
+  font-weight: vars.$font-weight-link;
 }
 
 p {
@@ -57,20 +52,20 @@ p {
 }
 
 main {
-  @include has-part-margin-after;
+  @include mix.has-part-margin-after;
 
-  @include handheld-only {
+  @include mix.handheld-only {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
   }
 
-  @include media('margin-top', get-relative-rem(70, $mobile-screen-width) $section-margin-tablet 0);
-  @include media('padding-top', $l-gap-mobile $section-margin-tablet 0);
+  @include mix.media('margin-top', func.get-relative-rem(70, vars.$mobile-screen-width) vars.$section-margin-tablet 0);
+  @include mix.media('padding-top', vars.$l-gap-mobile vars.$section-margin-tablet 0);
 }
 
 section {
-  @include has-section-margin-after;
+  @include mix.has-section-margin-after;
 
   &:last-child {
     @extend .margin-clear
@@ -78,7 +73,7 @@ section {
 }
 
 article {
-  @include has-article-margin-after;
+  @include mix.has-article-margin-after;
 
   &:last-child {
     @extend .margin-clear
