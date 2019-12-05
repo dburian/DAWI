@@ -1,3 +1,5 @@
+@use '../base/mixins' as mix;
+
 .leader-arch-thumb-wrapper {
   width: 50%;
   margin: 0 auto;
@@ -9,5 +11,5 @@
 }
 
 .proj-arch-name {
-  @include thick-line;
+  @include mix.thick-line;
 }

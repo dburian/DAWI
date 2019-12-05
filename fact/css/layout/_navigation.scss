@@ -1,5 +1,9 @@
+@use '../base/mixins' as mix;
+@use '../base/functions' as func;
+@use '../base/variables' as *;
+
 #nav {
-  @include handheld-only {
+  @include mix.handheld-only {
     background: $s-black;
     color: $s-light-grey;
 
@@ -11,14 +15,13 @@
 
     #nav-active-page {
       display: block;
-      height: get-relative-rem(70, $mobile-screen-width);
-
+      height: func.get-relative-rem(70, $mobile-screen-width);
 
       #nav-active-page-list {
         float: left;
         display: inline-block;
-        padding-top: get-relative-rem(20, $mobile-screen-width);
-        margin-left: get-relative-rem(35, $mobile-screen-width);
+        padding-top: func.get-relative-rem(20, $mobile-screen-width);
+        margin-left: func.get-relative-rem(35, $mobile-screen-width);
       }
     }
 
@@ -28,20 +31,20 @@
     }
   }
 
-  @include tablet-only {
+  @include mix.tablet-only {
     #nav-active-page {
       height: $section-margin-tablet;
 
       #nav-active-page-list {
-        padding-top: get-relative-rem(15, $tablet-screen-width);
-        margin-left: get-relative-rem(60, $tablet-screen-width);
+        padding-top: func.get-relative-rem(15, $tablet-screen-width);
+        margin-left: func.get-relative-rem(60, $tablet-screen-width);
       }
     }
 
   }
 
 
-  @include desktop-up {
+  @include mix.desktop-up {
     text-align: center;
     padding-bottom: $part-margin-desktop;
     margin-bottom: $part-margin-desktop;

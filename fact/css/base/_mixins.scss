@@ -1,3 +1,6 @@
+@use 'variables' as *;
+@use 'functions' as func;
+
 /*Media queries*/
 
 @mixin handheld-only {
@@ -66,7 +69,7 @@
   font-weight: inherit;
   margin: 0;
   text-transform: uppercase;
-  font-size: pow(1.0835, $level) * 1rem;
+  font-size: func.pow(1.0835, $level) * 1rem;
 }
 
 @mixin media($prop, $values) {

@@ -1,7 +1,9 @@
+@use '../base/mixins' as mix;
+
 #map {
   display: none;
 
-  @include tablet-up{
+  @include mix.tablet-up{
     display: block;
     border: none;
     filter: grayscale(100%);
@@ -10,7 +12,7 @@
     grid-area: map;
   }
 
-  @include desktop-up {
+  @include mix.desktop-up {
     height: 100%;
   }
 }
@@ -26,7 +28,7 @@
 #contact-billing-info {
   grid-area: billing-info;
 
-  @include tablet-only {
+  @include mix.tablet-only {
     text-align: center;
   }
 }

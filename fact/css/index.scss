@@ -1,12 +1,9 @@
-// IMPORTING COMMON STYLES (MAY INCLUDE VARIABLES USED LATER)
-@import "base/common", 'layout/common', 'module/common';
-
-@import
-'layout/navigation',
-'layout/footer',
-'layout/navigation-grid',
-'layout/unordered-grid',
-'module/navigation',
-'module/thumb-common',
-'module/square-thumb',
-'state/navigation';
+@use 'base/common' as *;
+@use 'layout/navigation'as *;
+@use 'layout/footer'as *;
+@use 'layout/navigation-grid'as *;
+@use 'layout/unordered-grid'as *;
+@use 'module/navigation'as *;
+@use 'module/thumb-common'as *;
+@use 'module/square-thumb'as *;
+@use 'state/navigation'as *;

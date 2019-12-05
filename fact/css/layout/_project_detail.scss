@@ -1,3 +1,5 @@
+@use '../base/mixins' as mix;
+
 #gallery {
   grid-area: gallery;
 }
@@ -13,7 +15,7 @@
 }
 
 #proj-detail-thumb {
-  @include media('display', block block none);
+  @include mix.media('display', block block none);
 }
 
 #project-text {

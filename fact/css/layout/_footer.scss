@@ -1,3 +1,6 @@
+@use '../base/mixins' as mix;
+@use '../base/variables' as *;
+
 #footer {
   width: 100%;
   color: $dark-grey;
@@ -8,21 +11,20 @@
   }
 
   #instagram {
-    @include media('margin-bottom', $section-margin-mobile $article-margin-tablet 0)
+    @include mix.media('margin-bottom', $section-margin-mobile $article-margin-tablet 0)
   }
 
   #copyright {
-    @include media('margin-bottom', $m-gap-mobile $s-gap-tablet 0);
+    @include mix.media('margin-bottom', $m-gap-mobile $s-gap-tablet 0);
   }
 
 
 
-
-  @include tablet-up{
+  @include mix.tablet-up{
   }
 
-  @include desktop-up {
-    @include thick-line;
+  @include mix.desktop-up {
+    @include mix.thick-line;
     text-align: left;
     display: grid;
     grid-template-areas: 'copyright divider instagram';

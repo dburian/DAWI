@@ -1,3 +1,6 @@
+@use 'grid-variables' as *;
+@use 'grid-common' as *;
+
 .l-ordered-grid-container {
   @extend .l-base-grid-container;
   grid-gap: 0;

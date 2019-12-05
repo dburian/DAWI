@@ -1,12 +1,16 @@
+@use '../base/mixins' as mix;
+@use '../base/variables' as *;
+@use 'grid-common' as *;
+
 .l-proj-arch-grid-container {
   @extend .l-base-grid-container;
 
-  @include tablet-up{
+  @include mix.tablet-up{
 
   }
 
-  @include desktop-up {
-    @include media('grid-row-gap', $article-margin-mobile $article-margin-tablet $article-margin-desktop);
+  @include mix.desktop-up {
+    @include mix.media('grid-row-gap', $article-margin-mobile $article-margin-tablet $article-margin-desktop);
   }
 
 }

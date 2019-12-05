@@ -1,3 +1,5 @@
+@use '../base/variables' as *;
+
 .is-active-menu-item {
   color: $black;
 }

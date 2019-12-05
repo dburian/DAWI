@@ -1,3 +1,7 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as mix;
+@use 'grid-variables' as g-vars;
+
 .l-contacts-grid-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -7,7 +11,7 @@
           "reach-us"
           "billing-info";
 
-  @include tablet-up{
+  @include mix.tablet-up{
     grid-template-columns: 1fr 1fr;
     grid-column-gap: $article-margin-tablet;
     grid-row-gap: $section-margin-tablet;
@@ -17,8 +21,8 @@
       "billing-info billing-info";
   }
 
-  @include desktop-up {
-    grid-column-gap: $column-gutter;
+  @include mix.desktop-up {
+    grid-column-gap: g-vars.$column-gutter;
     grid-template-columns: repeat(12, 1fr);
     grid-row-gap: $article-margin-desktop;
     grid-template-areas:
