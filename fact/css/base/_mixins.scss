@@ -27,6 +27,12 @@
   }
 }
 
+@mixin wide-up {
+  @media screen and (min-width: $wide-min-screen-width){
+    @content;
+  }
+}
+
 /*----------------------------*/
 
 @mixin has-part-margin-after {

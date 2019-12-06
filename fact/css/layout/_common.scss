@@ -11,6 +11,11 @@
     width: 90%;
     margin: auto;
   }
+
+  @include mix.wide-up {
+    width: 1600px;
+    margin: auto;
+  }
 }
 
 
