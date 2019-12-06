@@ -1,8 +1,8 @@
 @use 'grid-variables' as *;
-@use 'grid-common' as *;
+@use 'grid-mixins' as grid-mix;
 
 .l-ordered-grid-container {
-  @extend .l-base-grid-container;
+  @include grid-mix.base-grid;
   grid-gap: 0;
 }
 

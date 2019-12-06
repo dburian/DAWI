@@ -5,7 +5,6 @@
 #nav {
   @include mix.handheld-only {
     background: $s-black;
-    color: $s-light-grey;
 
     position: fixed;
     z-index: 999;
@@ -28,6 +27,12 @@
     #nav-menu {
       display: none;
       height: 100vh;
+
+      #nav-menu-list {
+        clear: both;
+        color: $s-white;
+        text-align: center;
+      }
     }
   }
 

@@ -1,9 +1,9 @@
 @use '../base/mixins' as mix;
 @use '../base/variables' as *;
-@use 'grid-common';
+@use 'grid-mixins' as g-mix;
 
 .l-unordered-grid-container {
-  @extend .l-base-grid-container;
+  @include g-mix.base-grid;
   grid-auto-rows: auto;
   @include mix.media('grid-row-gap', $section-margin-mobile $section-margin-tablet $section-margin-desktop);
 }
