@@ -1,9 +1,9 @@
 @use '../base/mixins' as mix;
 @use '../base/variables' as *;
-@use 'grid-common' as *;
+@use 'grid-mixins' as g-mix;
 
 .l-proj-arch-grid-container {
-  @extend .l-base-grid-container;
+  @include g-mix.base-grid;
 
   @include mix.tablet-up{
 
