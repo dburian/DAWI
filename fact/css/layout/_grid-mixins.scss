@@ -1,7 +1,7 @@
 @use 'grid-variables' as g-vars;
 @use '../base/mixins' as mix;
 
-.l-base-grid-container {
+@mixin base-grid {
   display: grid;
   grid-template-columns: 1fr;
 
@@ -18,5 +18,7 @@
   @media screen and (min-width: 1263px){
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-
 }
+
+
+

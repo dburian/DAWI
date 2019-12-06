@@ -1,5 +1,6 @@
 @use 'base/common' as *;
 @use 'layout/common' as *;
+
 @use 'layout/navigation'as *;
 @use 'layout/footer'as *;
 @use 'layout/navigation-grid'as *;
@@ -9,4 +10,5 @@
 @use 'module/navigation'as *;
 @use 'module/square-thumb'as *;
 @use 'module/about_us'as *;
+
 @use 'state/navigation'as *;
