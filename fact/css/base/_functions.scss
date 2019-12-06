@@ -4,12 +4,32 @@ $_zoom-const: 0.6;
 $_width-const: 1;
 $_master-const: 0.8;
 
+$_min_font: 0.9rem;
+$_max_font: 7rem;
+$_min_viewport: 300px;
+$_max_viewport: 1440px;
 
 @function get-font-size() {
-  @return calc((#{$_zoom-const} * 1rem + #{$_width-const} * 1vw) * #{$_master-const});
+  //calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+
+  @return calc(
+          #{$_min_font} +
+          (#{strip-unit($_max_font)} - #{strip-unit($_min_font)}) * ((100vw - #{$_min_viewport})/(#{strip-unit($_max_viewport)} - #{strip-unit($_min_viewport)}))
+  );
+  //@return calc((#{$_zoom-const} * 1rem + #{$_width-const} * 1vw) * #{$_master-const});
+}
+
+@function _get-striped-mult($a, $b) {
+  @return strip-unit($a) * strip-unit($b);
 }
 @function get-font-size-for($default-font-size, $screen-width) {
-  @return ($_zoom-const * strip-unit($default-font-size) + ($_width-const/100) * strip-unit($screen-width)) * $_master-const;
+  @return
+          _get-striped-mult($_min_font, $default-font-size) +
+          (strip-unit($_max_font) - strip-unit($_min_font)) *
+          //(_get-striped-mult($_max_font, $default-font-size) - _get-striped-mult($_min_font, $default-font-size)) *
+            ((strip-unit($screen-width) - strip-unit($_min_viewport))/ (strip-unit($_max_viewport) - strip-unit($_min_viewport)));
+
+  //@return ($_zoom-const * strip-unit($default-font-size) + ($_width-const/100) * strip-unit($screen-width)) * $_master-const;
 }
 
 
