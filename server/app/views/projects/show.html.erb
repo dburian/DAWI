@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @project.name %>
+</p>
+
+<p>
+  <strong>Long desc:</strong>
+  <%= @project.long_desc %>
+</p>
+
+<p>
+  <strong>Short desc:</strong>
+  <%= @project.short_desc %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @project.year %>
+</p>
+
+<p>
+  <strong>Function:</strong>
+  <%= @project.function %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @project.status %>
+</p>
+
+<p>
+  <strong>Preview img:</strong>
+  <%= @project.preview_img %>
+</p>
+
+<p>
+  <strong>Imgs:</strong>
+  <%= @project.imgs %>
+</p>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>
