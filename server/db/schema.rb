@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_15_133646) do
+ActiveRecord::Schema.define(version: 2019_12_15_150635) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,17 +32,33 @@ ActiveRecord::Schema.define(version: 2019_12_15_133646) do
     t.index ["project_id"], name: "index_project_architect_associations_on_project_id"
   end
 
+  create_table "project_functions", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "project_statuses", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "projects", force: :cascade do |t|
     t.string "name"
     t.text "long_desc"
     t.text "short_desc"
     t.integer "year"
-    t.string "function"
-    t.string "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "function_id_id"
+    t.bigint "status_id_id"
+    t.index ["function_id_id"], name: "index_projects_on_function_id_id"
+    t.index ["status_id_id"], name: "index_projects_on_status_id_id"
   end
 
   add_foreign_key "project_architect_associations", "architects"
   add_foreign_key "project_architect_associations", "projects"
+  add_foreign_key "projects", "project_functions", column: "function_id_id"
+  add_foreign_key "projects", "project_statuses", column: "status_id_id"
 end
