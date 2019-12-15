@@ -1,5 +1,5 @@
 class Architect < ApplicationRecord
-  has_many :project_architect_associations, dependent: :destroy
+  has_many :project_architect_associations, dependent: :destroy, inverse_of: :architect
   has_many :projects, through: :project_architect_associations
 
   validates :name, presence: true,

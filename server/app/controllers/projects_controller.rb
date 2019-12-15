@@ -24,7 +24,18 @@ class ProjectsController < ApplicationController
   # POST /projects
   # POST /projects.json
   def create
-    @project = Project.new(project_params)
+    pp = permitted_params
+    asoc_p = association_attr pp
+    @project = Project.new(name: pp[:name],
+                           long_desc: pp[:long_desc],
+                           short_desc: pp[:short_desc],
+                           year: pp[:year],
+                           function_id: pp[:function_id],
+                           status_id: pp[:status_id],
+                           project_architect_associations_attributes: asoc_p
+                          )
+
+    #architect_ids.map { |id| @project.architects << Architect.find(id) }
 
     respond_to do |format|
       if @project.save
@@ -68,7 +79,27 @@ class ProjectsController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def project_params
-      params.require(:project).permit(:name, :long_desc, :short_desc, :year, :function, :status, :preview_img, :imgs)
+    def permitted_params
+      base = params.require(:project).permit(
+          :name,
+          :long_desc,
+          :short_desc,
+          :year,
+          :function_id,
+          :status_id,
+          :architect_ids => []
+      )
+      logger.debug base
+      return base
     end
+    def association_attr pp
+      arch_ids = pp[:architect_ids].select {
+        |id| !id.blank?
+      }
+      logger.debug arch_ids
+      ret = arch_ids.map { |id| { architect_id: id } }
+      logger.debug ret
+      return ret
+    end
+      
 end

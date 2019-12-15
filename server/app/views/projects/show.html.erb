@@ -22,22 +22,12 @@
 
 <p>
   <strong>Function:</strong>
-  <%= @project.function %>
+  <%= ProjectFunction.find(@project.function_id).name %>
 </p>
 
 <p>
   <strong>Status:</strong>
-  <%= @project.status %>
-</p>
-
-<p>
-  <strong>Preview img:</strong>
-  <%= @project.preview_img %>
-</p>
-
-<p>
-  <strong>Imgs:</strong>
-  <%= @project.imgs %>
+  <%= ProjectStatus.find(@project.status_id).name %>
 </p>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
