@@ -1,4 +1,6 @@
 class Project < ApplicationRecord
+  has_many :architects, through: :project_architect_associations
+
   validates :name, presence: true,
                    length: { maximum: 40 }
 
