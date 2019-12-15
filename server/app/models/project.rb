@@ -1,7 +1,6 @@
 class Project < ApplicationRecord
   has_many :project_architect_associations, dependent: :destroy, inverse_of: :project
   has_many :architects, through: :project_architect_associations
-  accepts_nested_attributes_for :project_architect_associations
 
   validates :name, presence: true,
                    length: { maximum: 40 }
@@ -17,4 +16,10 @@ class Project < ApplicationRecord
                                    greater_than: 2009,
                                    less_than: 2100
                                  }
+  validate :has_some_architect
+
+  private
+    def has_some_architect
+      errors.add(:base, "Project must have at least one architect") if architect_ids.length == 0
+    end
 end
