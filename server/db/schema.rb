@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_15_150635) do
+ActiveRecord::Schema.define(version: 2019_12_15_152519) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,14 +51,14 @@ ActiveRecord::Schema.define(version: 2019_12_15_150635) do
     t.integer "year"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "function_id_id"
-    t.bigint "status_id_id"
-    t.index ["function_id_id"], name: "index_projects_on_function_id_id"
-    t.index ["status_id_id"], name: "index_projects_on_status_id_id"
+    t.bigint "function_id"
+    t.bigint "status_id"
+    t.index ["function_id"], name: "index_projects_on_function_id"
+    t.index ["status_id"], name: "index_projects_on_status_id"
   end
 
   add_foreign_key "project_architect_associations", "architects"
   add_foreign_key "project_architect_associations", "projects"
-  add_foreign_key "projects", "project_functions", column: "function_id_id"
-  add_foreign_key "projects", "project_statuses", column: "status_id_id"
+  add_foreign_key "projects", "project_functions", column: "function_id"
+  add_foreign_key "projects", "project_statuses", column: "status_id"
 end
