@@ -2,6 +2,6 @@
 .idea
 
 #Ignoring css and css.map files
-**/*.css
-**/*.css.map
+fact/**/*.css
+fact/**/*.css.map
 
