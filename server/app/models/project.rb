@@ -1,5 +1,11 @@
 class Project < ApplicationRecord
+  has_many :project_architect_associations, dependent: :destroy
   has_many :architects, through: :project_architect_associations
+  accepts_nested_attributes_for :project_architect_associations
+
+  belongs_to :project_functions
+  belongs_to :project_statuses
+
 
   validates :name, presence: true,
                    length: { maximum: 40 }
