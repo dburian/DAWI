@@ -1,0 +1,19 @@
+@use '../base/mixins' as mix;
+@use '../base/variables' as *;
+@use 'grid-variables' as g-vars;
+
+.l-leader-arch-grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: $article-margin-mobile;
+
+  @include mix.tablet-up {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: g-vars.$column-gutter;
+    grid-row-gap: 0;
+  }
+
+  @include mix.desktop-up {
+
+  }
+}

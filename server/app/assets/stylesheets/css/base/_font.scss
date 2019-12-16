@@ -1,0 +1,28 @@
+$_font-directory: '/font';
+
+//@font-face
+//  font-family: 'DINPro Light'
+//  font-style: normal
+//  font-weight: normal
+//  src: local('DINPro Light'), url('#{$_font-directory}/DINPro-Light tr.woff') format('woff')
+
+@font-face {
+  font-family: 'DINPro Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('DINPro Medium'), url('#{$_font-directory}/DINPro-Medium tr.woff') format('woff');
+}
+
+//@font-face {
+//  font-family: 'DINPro';
+//  font-style: normal;
+//  font-weight: bold;
+//  src: local('DINPro Bold'), url('#{$_font-directory}/DINPro-Bold.woff') format('woff');
+//}
+
+
+//@font-face
+//  font-family: 'DINPro Black'
+//  font-style: normal
+//  font-weight: normal
+//  src: local('DINPro Black'), url('#{$_font-directory}/DINPro-Black tr.woff') format('woff')

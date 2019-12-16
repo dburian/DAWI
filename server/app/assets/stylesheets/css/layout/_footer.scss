@@ -1,0 +1,47 @@
+@use '../base/mixins' as mix;
+@use '../base/variables' as *;
+
+#footer {
+  width: 100%;
+  color: $dark-grey;
+  text-align: center;
+
+  .word-divider {
+    display: none;
+  }
+
+  #instagram {
+    @include mix.media('margin-bottom', $section-margin-mobile $article-margin-tablet 0)
+  }
+
+  #copyright {
+    @include mix.media('margin-bottom', $m-gap-mobile $s-gap-tablet 0);
+  }
+
+
+
+  @include mix.tablet-up{
+  }
+
+  @include mix.desktop-up {
+    @include mix.thick-line;
+    text-align: left;
+    display: grid;
+    grid-template-areas: 'copyright divider instagram';
+    grid-template-columns: 1fr auto 1fr;
+
+    #copyright {
+      grid-area: copyright;
+      text-align: right;
+    }
+
+    .word-divider {
+      grid-area: divider;
+      display: block;
+    }
+
+    #instagram {
+      grid-area: instagram;
+    }
+  }
+}

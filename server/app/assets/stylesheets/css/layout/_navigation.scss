@@ -1,0 +1,81 @@
+@use '../base/mixins' as mix;
+@use '../base/functions' as func;
+@use '../base/variables' as *;
+
+#nav {
+  @include mix.handheld-only {
+    background: $s-black;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    #nav-active-page {
+      display: block;
+      height: func.get-relative-rem(70, $mobile-screen-width);
+
+      #nav-active-page-list {
+        float: left;
+        line-height: func.get-relative-rem(70, $mobile-screen-width);
+        //padding-top: func.get-relative-rem(20, $mobile-screen-width);
+        margin-left: func.get-relative-rem(35, $mobile-screen-width);
+      }
+    }
+
+    #nav-menu {
+      display: none;
+      height: 100vh;
+
+      #nav-menu-list {
+        clear: both;
+        color: $s-white;
+        text-align: center;
+      }
+    }
+  }
+
+  @include mix.tablet-only {
+    #nav-active-page {
+      height: $section-margin-tablet;
+
+      #nav-active-page-list {
+        line-height: $section-margin-tablet;
+        margin-left: func.get-relative-rem(60, $tablet-screen-width);
+      }
+    }
+
+  }
+
+
+  @include mix.desktop-up {
+    text-align: center;
+    padding-bottom: $part-margin-desktop;
+    margin-bottom: $part-margin-desktop;
+    padding-top: $section-margin-desktop;
+
+    #nav-active-page {
+      display: none;
+    }
+
+    #nav-menu {
+      display: block;
+      #close-icon {
+        display: none;
+      }
+    }
+
+    #nav-projects-container {
+      #nav-projects-dropdown {
+        display: none;
+        text-align: left;
+        position: absolute;
+        padding-left: 0.3rem
+      }
+
+      &:hover #nav-projects-dropdown {
+        display: block;
+      }
+    }
+  }
+}

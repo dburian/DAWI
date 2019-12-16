@@ -1,0 +1,16 @@
+@use '../base/mixins' as mix;
+@use 'grid-variables' as *;
+
+.l-project-detail-grid {
+  @include mix.tablet-up {
+
+  }
+
+  @include mix.desktop-up {
+    display: grid;
+    grid-column-gap: $column-gutter;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+            "gallery gallery gallery gallery gallery gallery gallery gallery text text text text";
+  }
+}
