@@ -24,7 +24,7 @@ class Project < ApplicationRecord
     def has_some_architect
       errors.add(:base, "Project must have at least one architect") if architect_ids.length == 0
     end
-    def funciton_exists
+    def function_exists
       errors.add(:base, "Provided project function does not exists") unless ProjectFunction.exists?(function_id)
     end
     def status_exists
