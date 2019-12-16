@@ -1,4 +1,4 @@
-class ProjectStatus < ApplicationRecord
+class Admin::ProjectStatus < ApplicationRecord
   validates :name, presence: true,
                     uniqueness: true,
                     length: { maximum: 50 }
