@@ -1,4 +1,4 @@
-<%= form_with(model: architect, local: true) do |form| %>
+<%= form_with(model: [:admin, architect], local: true) do |form| %>
   <% if architect.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(architect.errors.count, "error") %> prohibited this architect from being saved:</h2>
@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :position %>
-    <%= form.collection_select :position_id, Admin::ArchitectPosition.all, :id, :name %>
+    <%= form.collection_select :position_id, ArchitectPosition.all, :id, :name %>
   </div>
 
   <div class="field">

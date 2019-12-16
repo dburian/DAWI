@@ -1,4 +1,4 @@
-<%= form_with(model: project, local: true) do |form| %>
+<%= form_with(model: [:admin, project], local: true) do |form| %>
   <% if project.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
@@ -18,7 +18,7 @@
 
   <h3> Architects involved </h3>
 
-  <%= form.collection_check_boxes :architect_ids, Admin::Architect.all, :id, :name %>
+  <%= form.collection_check_boxes :architect_ids, Architect.all, :id, :name %>
 
   <div class="field">
     <%= form.label :long_desc %>
@@ -37,12 +37,12 @@
 
   <div class="field">
     <%= form.label :function %>
-    <%= form.collection_select :function_id, Admin::ProjectFunction.all, :id, :name %>
+    <%= form.collection_select :function_id, ProjectFunction.all, :id, :name %>
   </div>
 
   <div class="field">
     <%= form.label :status %>
-    <%= form.collection_select :status_id, Admin::ProjectStatus.all, :id, :name %>
+    <%= form.collection_select :status_id, ProjectStatus.all, :id, :name %>
   </div>
 
   <div class="field">

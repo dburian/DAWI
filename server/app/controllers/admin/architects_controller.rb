@@ -5,7 +5,7 @@ class Admin::ArchitectsController < Admin::ApplicationController
   # GET /architects
   # GET /architects.json
   def index
-    @architects = Admin::Architect.all
+    @architects = Architect.all
   end
 
   # GET /architects/1
@@ -15,7 +15,7 @@ class Admin::ArchitectsController < Admin::ApplicationController
 
   # GET /architects/new
   def new
-    @architect = Admin::Architect.new
+    @architect = Architect.new
   end
 
   # GET /architects/1/edit
@@ -25,11 +25,11 @@ class Admin::ArchitectsController < Admin::ApplicationController
   # POST /architects
   # POST /architects.json
   def create
-    @architect = Admin::Architect.new(architect_params)
+    @architect = Architect.new(architect_params)
 
     respond_to do |format|
       if @architect.save
-        format.html { redirect_to @architect, notice: 'Architect was successfully created.' }
+        format.html { redirect_to [:admin, @architect], notice: 'Architect was successfully created.' }
         format.json { render :show, status: :created, location: @architect }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class Admin::ArchitectsController < Admin::ApplicationController
   def update
     respond_to do |format|
       if @architect.update(architect_params)
-        format.html { redirect_to @architect, notice: 'Architect was successfully updated.' }
+        format.html { redirect_to [:admin, @architect], notice: 'Architect was successfully updated.' }
         format.json { render :show, status: :ok, location: @architect }
       else
         format.html { render :edit }
@@ -65,12 +65,12 @@ class Admin::ArchitectsController < Admin::ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_architect
-      @architect = Admin::Architect.find(params[:id])
+      @architect = Architect.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def architect_params
-      params.require(:admin_architect).permit(
+      params.require(:architect).permit(
         :name,
         :desc,
         :position_id
