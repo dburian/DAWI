@@ -2,6 +2,7 @@ module API
   module V1
     class Base < Grape::API
       mount API::V1::Projects
+      mount API::V1::Architects
     end
   end
 end
