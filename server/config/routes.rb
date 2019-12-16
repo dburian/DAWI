@@ -18,5 +18,7 @@ Rails.application.routes.draw do
   get "contacts" => "pages#contacts"
   get "about_us" => "pages#about_us"
   
+  # Mounting api shoudl be somewhere else (like /api)
+  # in root we have client pages
   mount API::Base, at: "/"
 end
