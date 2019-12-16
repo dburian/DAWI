@@ -1,4 +1,4 @@
-class Architect < ApplicationRecord
+class Admin::Architect < ApplicationRecord
   has_many :project_architect_associations, dependent: :destroy, inverse_of: :architect
   has_many :projects, through: :project_architect_associations
 
@@ -11,11 +11,11 @@ class Architect < ApplicationRecord
   private
     def is_leading_architect?
      logger.debug position_id
-     position_id == ArchitectPosition.find_by(name: "Leading Architect").id
+     position_id == Admin::ArchitectPosition.find_by(name: "Leading Architect").id
     end
 
     def position_exists
-      errors.add(:base, "Architect position does not exists") unless ArchitectPosition.exists?(position_id)
+      errors.add(:base, "Architect position does not exists") unless Admin::ArchitectPosition.exists?(position_id)
     end
 
     def has_desc_if_leading_arch

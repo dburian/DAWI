@@ -1,4 +1,4 @@
-class Project < ApplicationRecord
+class Admin::Project < ApplicationRecord
   has_many :project_architect_associations, dependent: :destroy, inverse_of: :project
   has_many :architects, through: :project_architect_associations
   has_many_attached :images
@@ -26,10 +26,10 @@ class Project < ApplicationRecord
       errors.add(:base, "Project must have at least one architect") if architect_ids.length == 0
     end
     def function_exists
-      errors.add(:base, "Provided project function does not exists") unless ProjectFunction.exists?(function_id)
+      errors.add(:base, "Provided project function does not exists") unless Admin::ProjectFunction.exists?(function_id)
     end
     def status_exists
-      errors.add(:base, "Provided project status does not exists") unless ProjectStatus.exists?(status_id)
+      errors.add(:base, "Provided project status does not exists") unless Admin::ProjectStatus.exists?(status_id)
     end
 
 end

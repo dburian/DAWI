@@ -1,10 +1,10 @@
-class ArchitectsController < ApplicationController
+class Admin::ArchitectsController < ApplicationController
   before_action :set_architect, only: [:show, :edit, :update, :destroy]
 
   # GET /architects
   # GET /architects.json
   def index
-    @architects = Architect.all
+    @architects = Admin::Architect.all
   end
 
   # GET /architects/1
@@ -14,7 +14,7 @@ class ArchitectsController < ApplicationController
 
   # GET /architects/new
   def new
-    @architect = Architect.new
+    @architect = Admin::Architect.new
   end
 
   # GET /architects/1/edit
@@ -24,7 +24,7 @@ class ArchitectsController < ApplicationController
   # POST /architects
   # POST /architects.json
   def create
-    @architect = Architect.new(architect_params)
+    @architect = Admin::Architect.new(architect_params)
 
     respond_to do |format|
       if @architect.save
@@ -56,7 +56,7 @@ class ArchitectsController < ApplicationController
   def destroy
     @architect.destroy
     respond_to do |format|
-      format.html { redirect_to architects_url, notice: 'Architect was successfully destroyed.' }
+      format.html { redirect_to admin_architects_url, notice: 'Architect was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -64,12 +64,12 @@ class ArchitectsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_architect
-      @architect = Architect.find(params[:id])
+      @architect = Admin::Architect.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def architect_params
-      params.require(:architect).permit(
+      params.require(:admin_architect).permit(
         :name,
         :desc,
         :position_id

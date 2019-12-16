@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :position %>
-    <%= form.collection_select :position_id, ArchitectPosition.all, :id, :name %>
+    <%= form.collection_select :position_id, Admin::ArchitectPosition.all, :id, :name %>
   </div>
 
   <div class="field">
