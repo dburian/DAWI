@@ -17,9 +17,18 @@ class Project < ApplicationRecord
                                    less_than: 2100
                                  }
   validate :has_some_architect
+  validate :function_exists
+  validate :status_exists
 
   private
     def has_some_architect
       errors.add(:base, "Project must have at least one architect") if architect_ids.length == 0
     end
+    def funciton_exists
+      errors.add(:base, "Provided project function does not exists") unless ProjectFunction.exists?(function_id)
+    end
+    def status_exists
+      errors.add(:base, "Provided project status does not exists") unless ProjectStatus.exists?(status_id)
+    end
+
 end
