@@ -1,11 +1,6 @@
 class Project < ApplicationRecord
-  has_many :project_architect_associations, dependent: :destroy
+  has_many :project_architect_associations, dependent: :destroy, inverse_of: :project
   has_many :architects, through: :project_architect_associations
-  accepts_nested_attributes_for :project_architect_associations
-
-  belongs_to :project_functions
-  belongs_to :project_statuses
-
 
   validates :name, presence: true,
                    length: { maximum: 40 }
@@ -18,19 +13,22 @@ class Project < ApplicationRecord
 
   validates :year, presence: true,
                    numericality: { only_integer: true,
-                                   greater_than: 2009
+                                   greater_than: 2009,
+                                   less_than: 2100
                                  }
+  validate :has_some_architect
+  validate :function_exists
+  validate :status_exists
 
-  FUNCTION_OPTIONS = %w(public_building residential_building administrative_building urbanismus)
-  validates :function, presence: true,
-                       inclusion: { in: FUNCTION_OPTIONS,
-                                    message: "%{value} must be one of #{FUNCTION_OPTIONS}"
-                                  }
-
-  STATUS_OPTIONS = %w(in_construction planned built)
-  validates :status, presence: true,
-                     inclusion: { in: STATUS_OPTIONS,
-                                  message: "%{value} must be one of #{STATUS_OPTIONS}"
-                                }
+  private
+    def has_some_architect
+      errors.add(:base, "Project must have at least one architect") if architect_ids.length == 0
+    end
+    def function_exists
+      errors.add(:base, "Provided project function does not exists") unless ProjectFunction.exists?(function_id)
+    end
+    def status_exists
+      errors.add(:base, "Provided project status does not exists") unless ProjectStatus.exists?(status_id)
+    end
 
 end

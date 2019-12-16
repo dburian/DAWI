@@ -22,23 +22,19 @@
 
 <p>
   <strong>Function:</strong>
-  <%= @project.function %>
+  <%= function_name %>
 </p>
 
 <p>
   <strong>Status:</strong>
-  <%= @project.status %>
+  <%= status_name %>
 </p>
 
 <p>
-  <strong>Preview img:</strong>
-  <%= @project.preview_img %>
+  <strong>Involved architects:</strong>
+  <%= architect_names %>
 </p>
 
-<p>
-  <strong>Imgs:</strong>
-  <%= @project.imgs %>
-</p>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
