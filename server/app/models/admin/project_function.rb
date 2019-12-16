@@ -1,4 +1,4 @@
-class ProjectFunction < ApplicationRecord
+class Admin::ProjectFunction < ApplicationRecord
   validates :name, presence: true,
                     uniqueness: true,
                     length: { maximum: 50 }
