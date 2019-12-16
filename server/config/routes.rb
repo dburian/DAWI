@@ -3,6 +3,8 @@ Rails.application.routes.draw do
     resources :projects
     resources :architects
 
+    root 'sessions#new'
+    get '/home', to: 'administration_pages#home'
     get '/login', to: 'sessions#new'
     post '/login', to: 'sessions#create'
     delete '/logout', to: 'sessions#destroy'

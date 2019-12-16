@@ -11,13 +11,18 @@ class Admin::SessionsController < Admin::ApplicationController
       logger.debug "Admin: #{admin.name}"
       log_in admin
       flash.now[:success] = "User #{admin.name} logged in."
-      redirect_to 'admin/projects'
+      redirect_to admin_root_path
     else
       flash.now[:danger] = 'Invalid email/password combination'
       render :new
     end
   end
 
+  def destroy
+    log_out
+    flash.now[:success] = 'Logged out'
+    redirect_to admin_root_path
+  end
   private
     def session_params
       params.require(:admin_session).permit(

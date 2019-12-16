@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fact | Administration</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
+
+    <h1> Fact administration pages </h1>
+    <% if logged_in? %>
+      <%= link_to 'Home', admin_home_path %> | <%= link_to 'Edit projects', admin_projects_path %> | <%= link_to 'Edit architects', admin_architects_path %>
+    <% end %>
+
+    <%= debug(params) %>
+    <%= yield %>
+  </body>
+</html>
