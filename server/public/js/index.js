@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 function updatePage(){
     $("#project-list").empty();
-    $.getJSON("json/projects.json",function(json){
+    $.getJSON("http://localhost:3000/api/v1/projects",function(json){
         $.each(json,function () {
             $('#project-list').append(
                 $('<li/>')

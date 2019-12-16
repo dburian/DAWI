@@ -7,7 +7,7 @@ function updatePage() {
     $("#list_2017").empty();
     $("#list_2018").empty();
     $("#list_2019").empty();
-    $.getJSON("json/projects.json", function (json) {
+    $.getJSON("http://localhost:3000/api/v1/projects", function (json) {
         $.each(json, function () {
             $('#list_'+this.year)
                 .append(
