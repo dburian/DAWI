@@ -18,4 +18,4 @@ ProjectStatus.create name: "Built"
 ArchitectPosition.create(name: "Leading Architect")
 ArchitectPosition.create(name: "Project Architect")
 
-Admin.create name: "admin", email: "admin@fact.com", password: "admin", password_confirmation: "admin"
+Admin::Admin.create name: "admin", email: "admin@fact.com", password: "admin", password_confirmation: "admin"
