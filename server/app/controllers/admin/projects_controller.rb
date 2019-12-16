@@ -26,7 +26,6 @@ class Admin::ProjectsController < Admin::ApplicationController
   # POST /projects.json
   def create
     @project = Project.new(project_params)
-    @project.images.attach(project_params[:images])
 
     respond_to do |format|
       if @project.save
@@ -43,7 +42,6 @@ class Admin::ProjectsController < Admin::ApplicationController
   # PATCH/PUT /projects/1.json
   def update
     @project.images.purge
-    @project.images.attach(project_params[:images])
 
     respond_to do |format|
       if @project.update(project_params)
