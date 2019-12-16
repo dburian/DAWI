@@ -1,4 +1,4 @@
-class Admin::ArchitectsController < ApplicationController
+class Admin::ArchitectsController < Admin::ApplicationController
   before_action :set_architect, only: [:show, :edit, :update, :destroy]
 
   # GET /architects
