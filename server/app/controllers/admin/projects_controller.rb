@@ -1,4 +1,5 @@
-class Admin::ProjectsController < ApplicationController
+class Admin::ProjectsController < Admin::ApplicationController
+  before_action :require_login
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
   # GET /projects
@@ -73,7 +74,7 @@ class Admin::ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      base = params.require(:admin_project).permit(
+      params.require(:admin_project).permit(
           :name,
           :long_desc,
           :short_desc,
@@ -83,7 +84,5 @@ class Admin::ProjectsController < ApplicationController
           architect_ids: [],
           images: []
       )
-      logger.debug base
-      return base
     end
 end
