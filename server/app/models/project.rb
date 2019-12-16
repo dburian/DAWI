@@ -1,6 +1,7 @@
 class Project < ApplicationRecord
   has_many :project_architect_associations, dependent: :destroy, inverse_of: :project
   has_many :architects, through: :project_architect_associations
+  has_many_attached :images
 
   validates :name, presence: true,
                    length: { maximum: 40 }

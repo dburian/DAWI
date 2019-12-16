@@ -35,6 +35,14 @@
   <%= architect_names %>
 </p>
 
+<p>
+  <strong>Images</strong>
+  <% (0...@project.images.count).each do |image_ind| %>
+    <%= image_tag @project.images[image_ind] %>
+  <% end %>
+</p>
+
+
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>

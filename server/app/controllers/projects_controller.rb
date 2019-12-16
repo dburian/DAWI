@@ -25,8 +25,7 @@ class ProjectsController < ApplicationController
   # POST /projects.json
   def create
     @project = Project.new(project_params)
-
-    #architect_ids.map { |id| @project.architects << Architect.find(id) }
+    @project.images.attach(project_params[:images])
 
     respond_to do |format|
       if @project.save
@@ -42,6 +41,9 @@ class ProjectsController < ApplicationController
   # PATCH/PUT /projects/1
   # PATCH/PUT /projects/1.json
   def update
+    @project.images.purge
+    @project.images.attach(project_params[:images])
+
     respond_to do |format|
       if @project.update(project_params)
         format.html { redirect_to @project, notice: 'Project was successfully updated.' }
@@ -78,7 +80,8 @@ class ProjectsController < ApplicationController
           :year,
           :function_id,
           :status_id,
-          :architect_ids => []
+          architect_ids: [],
+          images: []
       )
       logger.debug base
       return base
