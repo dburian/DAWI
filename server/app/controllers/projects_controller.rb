@@ -26,6 +26,8 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
 
+    #architect_ids.map { |id| @project.architects << Architect.find(id) }
+
     respond_to do |format|
       if @project.save
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
@@ -69,6 +71,16 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:name, :long_desc, :short_desc, :year, :function, :status, :preview_img, :imgs)
+      base = params.require(:project).permit(
+          :name,
+          :long_desc,
+          :short_desc,
+          :year,
+          :function_id,
+          :status_id,
+          :architect_ids => []
+      )
+      logger.debug base
+      return base
     end
 end

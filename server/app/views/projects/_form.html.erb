@@ -16,6 +16,10 @@
     <%= form.text_field :name %>
   </div>
 
+  <h3> Architects involved </h3>
+
+  <%= form.collection_check_boxes :architect_ids, Architect.all, :id, :name %>
+
   <div class="field">
     <%= form.label :long_desc %>
     <%= form.text_area :long_desc %>
@@ -33,22 +37,12 @@
 
   <div class="field">
     <%= form.label :function %>
-    <%= form.text_field :function %>
+    <%= form.collection_select :function_id, ProjectFunction.all, :id, :name %>
   </div>
 
   <div class="field">
     <%= form.label :status %>
-    <%= form.text_field :status %>
-  </div>
-
-  <div class="field">
-    <%= form.label :preview_img %>
-    <%= form.text_field :preview_img %>
-  </div>
-
-  <div class="field">
-    <%= form.label :imgs %>
-    <%= form.text_area :imgs %>
+    <%= form.collection_select :status_id, ProjectStatus.all, :id, :name %>
   </div>
 
   <div class="actions">
