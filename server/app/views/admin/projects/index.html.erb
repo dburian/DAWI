@@ -28,9 +28,9 @@
         <td><%= status_name project %></td>
         <td><%= architect_names project %></td>
         <td><%= project.images.count %></td>
-        <td><%= link_to 'Show', project %></td>
+        <td><%= link_to 'Show', admin_project_path(project) %></td>
         <td><%= link_to 'Edit', edit_admin_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', admin_project_path(project), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

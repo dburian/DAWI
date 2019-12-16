@@ -5,7 +5,7 @@ class Admin::ProjectsController < Admin::ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Admin::Project.all
+    @projects = Project.all
   end
 
   # GET /projects/1
@@ -15,7 +15,7 @@ class Admin::ProjectsController < Admin::ApplicationController
 
   # GET /projects/new
   def new
-    @project = Admin::Project.new
+    @project = Project.new
   end
 
   # GET /projects/1/edit
@@ -25,12 +25,12 @@ class Admin::ProjectsController < Admin::ApplicationController
   # POST /projects
   # POST /projects.json
   def create
-    @project = Admin::Project.new(project_params)
+    @project = Project.new(project_params)
     @project.images.attach(project_params[:images])
 
     respond_to do |format|
       if @project.save
-        format.html { redirect_to @project, notice: 'Project was successfully created.' }
+        format.html { redirect_to [:admin, @project], notice: 'Project was successfully created.' }
         format.json { render :show, status: :created, location: @project }
       else
         format.html { render :new }
@@ -47,7 +47,7 @@ class Admin::ProjectsController < Admin::ApplicationController
 
     respond_to do |format|
       if @project.update(project_params)
-        format.html { redirect_to @project, notice: 'Project was successfully updated.' }
+        format.html { redirect_to [:admin, @project], notice: 'Project was successfully updated.' }
         format.json { render :show, status: :ok, location: @project }
       else
         format.html { render :edit }
@@ -69,12 +69,12 @@ class Admin::ProjectsController < Admin::ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_project
-      @project = Admin::Project.find(params[:id])
+      @project = Project.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:admin_project).permit(
+      params.require(:project).permit(
           :name,
           :long_desc,
           :short_desc,

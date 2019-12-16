@@ -18,9 +18,9 @@
         <td><%= architect.name %></td>
         <td><%= position_name architect %></td>
         <td><%= architect.desc %></td>
-        <td><%= link_to 'Show', architect %></td>
+        <td><%= link_to 'Show', admin_architect_path(architect) %></td>
         <td><%= link_to 'Edit', edit_admin_architect_path(architect) %></td>
-        <td><%= link_to 'Destroy', architect, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', admin_architect_path(architect), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
