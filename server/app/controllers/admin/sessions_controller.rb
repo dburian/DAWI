@@ -11,7 +11,7 @@ class Admin::SessionsController < Admin::ApplicationController
       logger.debug "Admin: #{admin.name}"
       log_in admin
       flash.now[:success] = "User #{admin.name} logged in."
-      redirect_to admin_root_path
+      redirect_to admin_home_path
     else
       flash.now[:danger] = 'Invalid email/password combination'
       render :new
