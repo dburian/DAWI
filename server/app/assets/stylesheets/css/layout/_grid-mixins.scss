@@ -1,0 +1,24 @@
+@use 'grid-variables' as g-vars;
+@use '../base/mixins' as mix;
+
+@mixin base-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include mix.tablet-up{
+    grid-template-columns: repeat(auto-fit, minmax(g-vars.$min-img-width, 1fr));
+    grid-column-gap: g-vars.$column-gutter;
+  }
+
+  @include mix.desktop-up {
+
+  }
+
+  /*Right before there is a fifth column*/
+  @media screen and (min-width: 1263px){
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+
+

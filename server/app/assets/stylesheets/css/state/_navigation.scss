@@ -1,0 +1,27 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as mix;
+
+.is-active-menu-item {
+  color: $white;
+
+  @include mix.desktop-up {
+    color: $black;
+  }
+}
+
+.is-active-page-item {
+  display: inline-block;
+  color: $white;
+}
+
+.is-dropdown-menu-active {
+  @include mix.handheld-only {
+    #nav-active-page {
+      display: none !important;
+    }
+
+    #nav-menu {
+      display: block !important;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@use 'functions' as f;
+
+// Hardcoded variables
+
+$wide-min-screen-width: 1800px;
+$desktop-min-screen-width: 1200px;
+$tablet-min-screen-width: 600px;
+
+$desktop-screen-width: 1440px;
+$tablet-screen-width: 834px;
+$mobile-screen-width: 375px;
+
+$font-family: 'DINPro', sans-serif;
+$font-weight-normal: normal;
+$font-weight-link: normal;
+
+
+$white: #fff;
+$black: #000;
+$dark-grey: #A0A0A0;
+
+$s-black: rgba(0, 0, 0, 0.85);
+$s-light-grey: rgba(173, 173, 173, 0.85);
+$s-white: rgba(255, 255, 255, 0.85);
+
+// Computed variables
+
+$part-margin-desktop: f.get-relative-rem(120, $desktop-screen-width);
+$section-margin-desktop: f.get-relative-rem(100, $desktop-screen-width);
+$article-margin-desktop: f.get-relative-rem(60, $desktop-screen-width);
+
+$l-gap-desktop: f.get-relative-rem(60, $desktop-screen-width);
+$m-gap-desktop: f.get-relative-rem(35, $desktop-screen-width);
+$s-gap-desktop: f.get-relative-rem(20, $desktop-screen-width);
+$xs-gap-desktop: f.get-relative-rem(15, $desktop-screen-width);
+
+
+$part-margin-tablet: f.get-relative-rem(100, $tablet-screen-width);
+$section-margin-tablet: f.get-relative-rem(80, $tablet-screen-width);
+$article-margin-tablet: f.get-relative-rem(40, $tablet-screen-width);
+
+$l-gap-tablet: f.get-relative-rem(30, $tablet-screen-width);
+$s-gap-tablet: f.get-relative-rem(15, $tablet-screen-width);
+
+$part-margin-mobile: f.get-relative-rem(80, $mobile-screen-width);
+$section-margin-mobile: f.get-relative-rem(60, $mobile-screen-width);
+$article-margin-mobile: f.get-relative-rem(40, $mobile-screen-width);
+
+$l-gap-mobile: f.get-relative-rem(30, $mobile-screen-width);
+$m-gap-mobile: f.get-relative-rem(20, $mobile-screen-width);
