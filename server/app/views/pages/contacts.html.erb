@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/contacts.css">
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="js/contact_form.js"></script>
+    <script type="text/javascript" src="js/contacts.js"></script>
     <script src="js/navigation.js"></script>
     <meta name="viewport" content="width=device-width">
 
@@ -77,7 +78,7 @@
 
         <div id="contact-branches">
             <h1 class="contacts-article-header">Branches</h1>
-            <ol>
+            <ol id="branches_list">
                 <li class="contacts-article-list-item">
                     <h3 class="contacts-article-list-item-header">Prague</h3>
                     <p>Calle Bernardo de la Torre 19, 35007<br/>
@@ -99,14 +100,14 @@
 
             <ol>
                 <li class="contacts-article-list-item">
-                    <p><a>+420 222 333 444 555</a></p>
+                    <p><a id="phone_label">+420 222 333 444 555</a></p>
                 </li>
                 <li class="contacts-article-list-item">
-                    <p><a>info(at)fact.cz</a></p>
-                    <p><a>business(at)fact.cz</a></p>
+                    <p><a id="info_mail_label">info(at)fact.cz</a></p>
+                    <p><a id="business_mail_label">business(at)fact.cz</a></p>
                 </li>
                 <li class="contacts-article-list-item">
-                    <p>Instagram.com/Fact</p>
+                    <p id="insta_label>Instagram.com/Fact</p>
                 </li>
             </ol>
         </div>

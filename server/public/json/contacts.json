@@ -1,0 +1,21 @@
+{
+	"branches": [
+		{
+			"name": "Prague",
+			"address_1": "Calle Bernardo de la Torre 19",
+			"address_2": "35007 Las Palmas de Gran Canaria",
+			"address_3": "Las Palmas, España"
+		},
+		{
+			"name": "Písek",
+			"address_1": "Calle Bernardo de la Torre 19",
+			"address_2": "35007 Las Palmas de Gran Canaria",
+			"address_3": "Las Palmas, España"	
+		}
+	],
+	"phone_number": "+420 222 333 444 555",
+	"info_mail": "info(at)fact.cz",
+	"business_mail": "business(at)fact.cz",
+	"insta_link": "Instagram.com/Fact"
+}
+
