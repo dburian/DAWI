@@ -11,6 +11,7 @@
       <th>Year</th>
       <th>Function</th>
       <th>Status</th>
+      <th>Involved Architects</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,8 +23,9 @@
         <td><%= project.long_desc %></td>
         <td><%= project.short_desc %></td>
         <td><%= project.year %></td>
-        <td><%= ProjectFunction.find(project.function_id).name %></td>
-        <td><%= ProjectStatus.find(project.status_id).name %></td>
+        <td><%= function_name project %></td>
+        <td><%= status_name project %></td>
+        <td><%= architect_names project %></td>
         <td><%= link_to 'Show', project %></td>
         <td><%= link_to 'Edit', edit_project_path(project) %></td>
         <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>

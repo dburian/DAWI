@@ -22,13 +22,19 @@
 
 <p>
   <strong>Function:</strong>
-  <%= ProjectFunction.find(@project.function_id).name %>
+  <%= function_name %>
 </p>
 
 <p>
   <strong>Status:</strong>
-  <%= ProjectStatus.find(@project.status_id).name %>
+  <%= status_name %>
 </p>
+
+<p>
+  <strong>Involved architects:</strong>
+  <%= architect_names %>
+</p>
+
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
