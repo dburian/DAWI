@@ -10,17 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_15_153842) do
+ActiveRecord::Schema.define(version: 2019_12_16_002536) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "architect_positions", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "architects", force: :cascade do |t|
     t.string "name"
-    t.string "position"
     t.text "desc"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "position_id"
+    t.index ["position_id"], name: "index_architects_on_position_id"
   end
 
   create_table "project_architect_associations", force: :cascade do |t|
@@ -57,6 +64,7 @@ ActiveRecord::Schema.define(version: 2019_12_15_153842) do
     t.index ["status_id"], name: "index_projects_on_status_id"
   end
 
+  add_foreign_key "architects", "architect_positions", column: "position_id"
   add_foreign_key "project_architect_associations", "architects"
   add_foreign_key "project_architect_associations", "projects"
   add_foreign_key "projects", "project_functions", column: "function_id"

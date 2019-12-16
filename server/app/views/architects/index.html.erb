@@ -16,7 +16,7 @@
     <% @architects.each do |architect| %>
       <tr>
         <td><%= architect.name %></td>
-        <td><%= architect.position %></td>
+        <td><%= position_name architect %></td>
         <td><%= architect.desc %></td>
         <td><%= link_to 'Show', architect %></td>
         <td><%= link_to 'Edit', edit_architect_path(architect) %></td>
