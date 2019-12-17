@@ -1,10 +1,8 @@
 $(document).ready(function() {
   $("#architects_list").empty();
-  $.getJSON("json/projects.json", "", function(json) {
+  $.getJSON("/api/v1/architects", "", function(json) {
     $.each(json, function() {
-      $.each(this.architects, function() {
-        $("#architects_list").append($("<h3/>").text(this));
-      });
+      $("#architects_list").append($("<h3/>").text(this.name));
     });
   });
 
@@ -34,7 +32,7 @@ $(document).ready(function() {
                           .append(
                             $("<img/>")
                               .addClass("thumb-image")
-                              .attr("src", "images/" + this.img)
+                              .attr("src", this.img)
                           )
                       )
                   )
