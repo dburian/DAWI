@@ -25,7 +25,11 @@ function updateDetails(){
                 $('<p/>')
                     .text(obj[0].long_desc)
             )
+
+	$('#proj-detail-thumb').attr("src",obj[0].images[0]);
     });
+
+
 }
 
 function getObjects(obj, key, val) {
