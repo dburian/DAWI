@@ -41,8 +41,6 @@ class Admin::ProjectsController < Admin::ApplicationController
   # PATCH/PUT /projects/1
   # PATCH/PUT /projects/1.json
   def update
-    @project.images.purge
-
     respond_to do |format|
       if @project.update(project_params)
         format.html { redirect_to [:admin, @project], notice: 'Project was successfully updated.' }
