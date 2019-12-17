@@ -5,12 +5,12 @@ $(document).ready(function(){
 function updateDetails(){
     $("#gallery").empty();
     $("#project-text").empty();
-    $.getJSON("json/projects.json","",function(json){
+    $.getJSON("http://localhost:3000/api/v1/projects","",function(json){
         var obj = getObjects(json,"id",getUrlParameter("id"));
         for(var i = 0; i < obj[0].images.length; i++) {
             $('#gallery').append(
                     $('<img/>')
-                        .attr("src", 'images/' + obj[0].images[i])
+                        .attr("src", obj[0].images[i])
                         .attr("alt", "here should be a picture")
                         .addClass("gallery-image")
                     );
@@ -23,7 +23,7 @@ function updateDetails(){
             )
             .append(
                 $('<p/>')
-                    .text(obj[0].description)
+                    .text(obj[0].long_desc)
             )
     });
 }
