@@ -24,8 +24,8 @@ Admin::Admin.create name: "admin", email: "admin@fact.com", password: "admin", p
 # Populate database
 require 'faker'
 
-ARCHS = 20
-PROJS = 12
+ARCHS = 10
+PROJS = 20
 IMGS = 5
 img_names = ["apartments_2017.jpg", "apartments_2018.jpg", "apartments_2019_a.jpg", "apartments_2019_b.jpg", "office_2017.jpg", "office_2018.jpg", "office_2019.jpg", "office_panorama.jpg", "public_2017.jpg", "public_2018_a.jpg", "public_2018_b.jpg", "public_2019.jpg"]
 
