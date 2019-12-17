@@ -26,7 +26,7 @@ function updatePage() {
                                                         .addClass("max-volume")
                                                         .append(
                                                             $('<img/>')
-                                                                .attr("src", "images/" + this.images[0])
+                                                                .attr("src", this.images[0])
                                                                 .addClass("thumb-image")
                                                         )
                                                 )
