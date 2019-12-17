@@ -8,8 +8,8 @@ class ProjectSerializer < ActiveModel::Serializer
     image_urls = []
     object.images.map do |image|   
       image_urls << rails_blob_path(image, only_path: true)
-
     end
+    return image_urls
   end
 
 end
