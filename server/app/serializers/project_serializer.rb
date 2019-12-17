@@ -4,15 +4,12 @@ class ProjectSerializer < ActiveModel::Serializer
 
   attributes :id, :name, :long_desc, :year, :function_id, :status_id, :architects, :images
 
- #def images
- # return unless object.images.attachments
- # image_urls = object.images.map do |image| 
- #   URI.join(
- #     ActionController::Base.asset_host, 
- #     rails_blob_path(image))
- # end
- #
- # image_urls
- #end 
+  def images
+    image_urls = []
+    object.images.map do |image|   
+      image_urls << rails_blob_path(image, only_path: true)
+    end
+    return image_urls
+  end
 
 end

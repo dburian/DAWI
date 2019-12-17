@@ -18,7 +18,7 @@ function updatePage(){
                                     .addClass("max-volume")
                                     .append($('<img/>')
                                         .addClass("thumb-image")
-                                        .attr("src", 'images/'+this.images[0])
+                                        .attr("src", this.images[0])
                                         .attr("alt", "here should be a picture"))))
                             .append($('<h3>')
                                 .addClass("square-thumb-header")
