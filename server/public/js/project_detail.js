@@ -5,7 +5,7 @@ $(document).ready(function(){
 function updateDetails(){
     $("#gallery").empty();
     $("#project-text").empty();
-    $.getJSON("/api/v1/projects","",function(json){
+    $.getJSON("/api/v1/projects/"+getUrlParameter("id"),"",function(json){
         var obj = getObjects(json,"id",getUrlParameter("id"));
         for(var i = 0; i < obj[0].images.length; i++) {
             $('#gallery').append(
