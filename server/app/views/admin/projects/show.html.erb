@@ -37,8 +37,12 @@
 
 <p>
   <strong>Images</strong>
+  <br>
   <% (0...@project.images.count).each do |image_ind| %>
-    <%= image_tag @project.images[image_ind] %>
+    <%= link_to @project.images[image_ind] do %>
+      <%= image_tag @project.images[image_ind], style: 'height:20em;width:auto;' %>
+    <% end %>
+    <br>
   <% end %>
 </p>
 
