@@ -62,14 +62,12 @@ PROJS.times do
 		architect_ids: architects_ids_temp
 	)
 
-	img_tmp = img_names[rand(img_names.length)]
-
 	(rand(IMGS)+1).times do
+		img_tmp = img_names[rand(img_names.length)]
 		p.images.attach(io: File.open(Rails.root.join('app/assets/images', img_tmp)), filename: img_tmp)
 	end
 
 end
-
 
 # TABLES: "architect_positions", "architects", "admins", "project_architect_associations", "project_functions", "active_storage_blobs", "active_storage_attachments", "projects", "project_statuses", "schema_migrations", "ar_internal_metadata"
 
