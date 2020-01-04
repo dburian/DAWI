@@ -3,7 +3,7 @@
 <% end %>
 
 <% content_for :javascripts do %>
-    <%= javascript_include_tag "index" %>
+    <%= javascript_pack_tag 'index', 'data-turbolinks-track': 'reload' %>
 <% end %>
 <main>
     <ul id="project-list" class="l-unordered-grid-container">

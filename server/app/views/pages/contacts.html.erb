@@ -3,8 +3,7 @@
 <% end %>
 
 <% content_for :javascripts do %>
-    <%= javascript_include_tag "contact_form" %>
-    <%= javascript_include_tag "contacts" %>
+    <%= javascript_pack_tag 'contacts', 'data-turbolinks-track': 'reload' %>
 <% end %>
 <main class="l-contacts-grid-container">
 

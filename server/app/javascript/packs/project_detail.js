@@ -8,12 +8,7 @@ require("turbolinks").start();
 require("@rails/activestorage").start();
 require("channels");
 
-import '../src/about_us.js';
-import '../src/contact_form.js';
-import '../src/contacts.js';
-import '../src/index.js';
 import '../src/navigation.js';
-import '../src/ordered_projects.js';
 import '../src/project_detail.js';
 
 $(function () {
