@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>FACT</title>
+<% content_for :stylesheets do %>
+    <%= stylesheet_link_tag "index", media: "all" %>
+<% end %>
 
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script src="js/navigation.js"></script>
-    <meta name="viewport" content="width=device-width">
+<% content_for :javascripts do %>
+    <%= javascript_include_tag "index" %>
+<% end %>
 
-</head>
-<body>
 <div id="wrapper">
 
     <nav id="nav">
@@ -75,132 +69,6 @@
 
     <main>
         <ul id="project-list" class="l-unordered-grid-container">
-            <li>
-                <a href="project_detail.html">
-                    <div class="square-thumb bw-on-hover">
-                        <div class="square-shape">
-                            <div class="max-volume">
-                                <img src="images/office_2018.jpg"
-                                     class="thumb-image"/>
-                            </div>
-                        </div>
-
-                        <h3 class="square-thumb-header">Public building</h3>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="project_detail.html">
-                    <div class="square-thumb bw-on-hover">
-                        <div class="square-shape">
-                            <div class="max-volume">
-                                <img src="images/office_2018.jpg"
-                                     class="thumb-image"/>
-                            </div>
-                        </div>
-
-                        <h3 class="square-thumb-header">Public building</h3>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="project_detail.html">
-                    <div class="square-thumb bw-on-hover">
-                        <div class="square-shape">
-                            <div class="max-volume">
-                                <img src="images/office_2018.jpg"
-                                     class="thumb-image"/>
-                            </div>
-                        </div>
-
-                        <h3 class="square-thumb-header">Public building</h3>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="project_detail.html">
-                    <div class="square-thumb bw-on-hover">
-                        <div class="square-shape">
-                            <div class="max-volume">
-                                <img src="images/office_2018.jpg"
-                                     class="thumb-image"/>
-                            </div>
-                        </div>
-                        <h3 class="square-thumb-header">Public building</h3>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="project_detail.html">
-                    <div class="square-thumb bw-on-hover">
-                        <div class="square-shape">
-                            <div class="max-volume">
-                                <img src="images/office_2018.jpg"
-                                     class="thumb-image"/>
-                            </div>
-                        </div>
-
-                        <h3 class="square-thumb-header">Public building</h3>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="project_detail.html">
-                    <div class="square-thumb bw-on-hover">
-                        <div class="square-shape">
-                            <div class="max-volume">
-                                <img src="images/office_2018.jpg"
-                                     class="thumb-image"/>
-                            </div>
-                        </div>
-
-                        <h3 class="square-thumb-header">Public building</h3>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="project_detail.html">
-                    <div class="square-thumb bw-on-hover">
-                        <div class="square-shape">
-                            <div class="max-volume">
-                                <img src="images/office_2018.jpg"
-                                     class="thumb-image"/>
-                            </div>
-                        </div>
-
-                        <h3 class="square-thumb-header">Public building</h3>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="project_detail.html">
-                    <div class="square-thumb bw-on-hover">
-                        <div class="square-shape">
-                            <div class="max-volume">
-                                <img src="images/office_2018.jpg"
-                                     class="thumb-image"/>
-                            </div>
-                        </div>
-
-                        <h3 class="square-thumb-header">Public building</h3>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="project_detail.html">
-                    <div class="square-thumb bw-on-hover">
-                        <div class="square-shape">
-                            <div class="max-volume">
-                                <img src="images/office_2018.jpg"
-                                     class="thumb-image"/>
-                            </div>
-                        </div>
-
-                        <h3 class="square-thumb-header">Public building</h3>
-                    </div>
-                </a>
-            </li>
-
         </ul>
     </main>
 
@@ -213,15 +81,4 @@
         </div>
         <span class="word-divider"></span>
     </footer>
-
-    <!--    <div style="background: blue; width: 30px; height: 1rem; display: inline-block"></div>-->
-    <!--    <div style="background: green; width: 30px; height: 2rem ; display: inline-block"></div>-->
-    <!--    <div style="background: yellow; width: 30px; height: 3rem; display: inline-block"></div>-->
-    <!--    <div style="background: red; width: 30px; height: 4rem; display: inline-block"></div>-->
-    <!--    <div style="background: magenta; width: 30px; height: 5rem; display: inline-block"></div>-->
-    <!--    <div style="background: grey; width: 30px; height: 6rem; display: inline-block"></div>-->
-    <!--    <div style="background: darkblue; width: 30px; height: 7rem; display: inline-block"></div>-->
-    <!--    <div style="background: black; width: 30px; height: 8rem; display: inline-block"></div>-->
 </div>
-</body>
-</html>

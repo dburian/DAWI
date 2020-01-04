@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>FACT</title>
-    <link rel="stylesheet" type="text/css" href="css/about_us.css">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript" src="js/about_us.js"></script>
-    <script src="js/navigation.js"></script>
-    <meta name="viewport" content="width=device-width">
-</head>
-<body>
+<% content_for :stylesheets do %>
+    <%= stylesheet_link_tag "about_us", media: "all" %>
+<% end %>
+
+<% content_for :javascripts do %>
+    <%= javascript_include_tag "about_us" %>
+<% end %>
 
 <div id="wrapper">
-
     <nav id="nav">
         <div id="nav-active-page">
             <svg id="menu-icon" class="nav-icon" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -77,109 +71,17 @@
         <section>
             <h1 class="section-header">Fact s.r.o</h1>
             <section id="description_grid" class="l-about-grid-container">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum, purus sit amet volutpat
-                    tempor, nibh ex commodo risus, et malesuada turpis ex sed velit. Fusce egestas at ligula in
-                    laoreet. Donec quis neque justo. In convallis sollicitudin mauris sit amet interdum. Cras
-                    ultrices aliquam dolor et commodo. Cras quis egestas est. Duis commodo egestas sem vitae
-                    ullamcorper. Fusce in massa ultricies, varius risus ut, aliquet elit. Integer maximus semper
-                    arcu, eu convallis ex tempor et.
-                    Duis nec est libero. Maecenas condimentum massa posuere justo elementum posuere. Sed consequat
-                    commodo justo, sit amet viverra dui mattis ultrices. Curabitur porttitor libero quis diam
-                    eleifend tempor. Etiam vehicula velit vitae augue consequat, et dignissim nunc luctus. Aliquam
-                    erat volutpat. Aliquam ultrices, orci interdum pellentesque feugiat, sem sapien elementum est,
-                    vitae vestibulum elit ex id nulla. Nulla dapibus, tortor ut vulputate ultrices, orci justo
-                    tincidunt tellus, et porta risus ligula at ante.
-                </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum, purus sit amet volutpat
-                    tempor, nibh ex commodo risus, et malesuada turpis ex sed velit. Fusce egestas at ligula in
-                    laoreet. Donec quis neque justo. In convallis sollicitudin mauris sit amet interdum. Cras
-                    ultrices aliquam dolor et commodo. Cras quis egestas est. Duis commodo egestas sem vitae
-                    ullamcorper. Fusce in massa ultricies, varius risus ut, aliquet elit. Integer maximus semper
-                    arcu, eu convallis ex tempor et.
-                    Duis nec est libero. Maecenas condimentum massa posuere justo elementum posuere. Sed consequat
-                    commodo justo, sit amet viverra dui mattis ultrices. Curabitur porttitor libero quis diam
-                    eleifend tempor. Etiam vehicula velit vitae augue consequat, et dignissim nunc luctus. Aliquam
-                    erat volutpat. Aliquam ultrices, orci interdum pellentesque feugiat, sem sapien elementum est,
-                    vitae vestibulum elit ex id nulla. Nulla dapibus, tortor ut vulputate ultrices, orci justo
-                    tincidunt tellus, et porta risus ligula at ante.
-                </p>
             </section>
         </section>
         <section>
             <h1 class="section-header centered">Leading architects</h1>
             <article id="leading_architects_article" class="l-leader-arch-grid-container">
-                <div>
-                    <div class="leader-arch-thumb-wrapper">
-                        <div class="square-thumb">
-                            <div class="square-shape">
-                                <div class="max-volume">
-                                    <img src="images/portrait_m_1.jpg" class="thumb-image">
-                                </div>
-                            </div>
-
-                            <h3 class="square-thumb-header">Name Surname</h3>
-                        </div>
-                    </div>
-
-                    <p class="leader-arch-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                        fermentum, purus sit amet volutpat tempor, nibh ex commodo risus, et malesuada turpis ex sed
-                        velit. Fusce egestas at ligula in laoreet. Donec quis neque justo. In convallis sollicitudin
-                        mauris sit amet interdum. Cras ultrices aliquam dolor et commodo. Cras quis egestas est.
-                        Duis commodo egestas sem vitae ullamcorper. Fusce in massa ultricies, varius risus ut,
-                        aliquet elit. Integer maximus semper arcu, eu convallis ex tempor et.
-                        <br/><br/>
-                        Duis nec est libero. Maecenas condimentum massa posuere justo elementum posuere. Sed
-                        consequat commodo justo, sit amet viverra dui mattis ultrices. Curabitur porttitor libero
-                        quis diam eleifend tempor. Etiam vehicula velit vitae augue consequat, et dignissim nunc
-                        luctus. Aliquam erat volutpat. Aliquam ultrices, orci interdum pellentesque feugiat, sem
-                        sapien elementum est, vitae vestibulum elit ex id nulla. Nulla dapibus, tortor ut vulputate
-                        ultrices, orci justo tincidunt tellus, et porta risus ligula at ante.
-                    </p>
-                </div>
-                <div>
-                    <section class="leader-arch-thumb-wrapper">
-                        <div class="square-thumb">
-                            <div class="square-shape">
-                                <div class="max-volume">
-                                    <img src="images/portrait_m_1.jpg" class="thumb-image">
-                                </div>
-                            </div>
-
-                            <h3 class="square-thumb-header">Name Surname</h3>
-                        </div>
-                    </section>
-
-                    <p class="leader-arch-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                        fermentum, purus sit amet volutpat tempor, nibh ex commodo risus, et malesuada turpis ex sed
-                        velit. Fusce egestas at ligula in laoreet. Donec quis neque justo. In convallis sollicitudin
-                        mauris sit amet interdum. Cras ultrices aliquam dolor et commodo. Cras quis egestas est.
-                        Duis commodo egestas sem vitae ullamcorper. Fusce in massa ultricies, varius risus ut,
-                        aliquet elit. Integer maximus semper arcu, eu convallis ex tempor et.
-                        <br/><br/>
-                        Duis nec est libero. Maecenas condimentum massa posuere justo elementum posuere. Sed
-                        consequat commodo justo, sit amet viverra dui mattis ultrices. Curabitur porttitor libero
-                        quis diam eleifend tempor. Etiam vehicula velit vitae augue consequat, et dignissim nunc
-                        luctus. Aliquam erat volutpat. Aliquam ultrices, orci interdum pellentesque feugiat, sem
-                        sapien elementum est, vitae vestibulum elit ex id nulla. Nulla dapibus, tortor ut vulputate
-                        ultrices, orci justo tincidunt tellus, et porta risus ligula at ante.
-                    </p>
-                </div>
             </article>
         </section>
 
         <section class="centered margin-clear">
             <h1 class="section-header">Project architects</h1>
             <section class="l-proj-arch-grid-container" id="architects_list">
-                <h3 class="proj-arch-name">Name Surname</h3>
-                <h3 class="proj-arch-name">Name Surname</h3>
-                <h3 class="proj-arch-name">Name Surname</h3>
-                <h3 class="proj-arch-name">Name Surname</h3>
-                <h3 class="proj-arch-name">Name Surname</h3>
-                <h3 class="proj-arch-name">Name Surname</h3>
-                <h3 class="proj-arch-name">Name Surname</h3>
-                <h3 class="proj-arch-name">Name Surname</h3>
-                <h3 class="proj-arch-name">Name Surname</h3>
-                <h3 class="proj-arch-name">Name Surname</h3>
             </section>
         </section>
     </main>
@@ -194,5 +96,3 @@
         <span class="word-divider"></span>
     </footer>
 </div>
-</body>
-</html>

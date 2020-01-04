@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>FACT</title>
-    <link rel="stylesheet" type="text/css" href="css/contacts.css">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript" src="js/contact_form.js"></script>
-    <script type="text/javascript" src="js/contacts.js"></script>
-    <script src="js/navigation.js"></script>
-    <meta name="viewport" content="width=device-width">
+<% content_for :stylesheets do %>
+    <%= stylesheet_link_tag "contacts", media: "all" %>
+<% end %>
 
-</head>
-<body>
+<% content_for :javascripts do %>
+    <%= javascript_include_tag "contact_form" %>
+    <%= javascript_include_tag "contacts" %>
+<% end %>
 <div id="wrapper">
 
 
@@ -79,20 +73,6 @@
         <div id="contact-branches">
             <h1 class="contacts-article-header">Branches</h1>
             <ol id="branches_list">
-                <li class="contacts-article-list-item">
-                    <h3 class="contacts-article-list-item-header">Prague</h3>
-                    <p>Calle Bernardo de la Torre 19, 35007<br/>
-                        Las Palmas de Gran Canaria,<br/>
-                        Las Palmas, España
-                    </p>
-                </li>
-                <li class="contacts-article-list-item">
-                    <h3 class="contacts-article-list-item-header">Písek</h3>
-                    <p>Calle Bernardo de la Torre 19, 35007<br/>
-                        Las Palmas de Gran Canaria,<br/>
-                        Las Palmas, España
-                    </p>
-                </li>
             </ol>
         </div>
         <div id="contact-reach-us">
@@ -100,14 +80,14 @@
 
             <ol>
                 <li class="contacts-article-list-item">
-                    <p><a id="phone_label">+420 222 333 444 555</a></p>
+                    <p><a id="phone_label"></a></p>
                 </li>
                 <li class="contacts-article-list-item">
-                    <p><a id="info_mail_label">info(at)fact.cz</a></p>
-                    <p><a id="business_mail_label">business(at)fact.cz</a></p>
+                    <p><a id="info_mail_label"></a></p>
+                    <p><a id="business_mail_label"></a></p>
                 </li>
                 <li class="contacts-article-list-item">
-                    <p id="insta_label>Instagram.com/Fact</p>
+                    <p id="insta_label"></p>
                 </li>
             </ol>
         </div>
@@ -116,7 +96,6 @@
 
             <ol>
                 <li class="contacts-article-list-item">
-                    <!--TODO-->
                     <p>dič:&nbsp;123456789</p>
                     <p>ič:&nbsp;&nbsp;&nbsp;123456789</p>
                 </li>
@@ -175,5 +154,3 @@
         <span class="word-divider"></span>
     </footer>
 </div>
-</body>
-</html>
