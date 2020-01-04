@@ -22,7 +22,7 @@
                     <li class="nav-page-item <%= "is-active-page-item" if action_name == "index" %>">
                         <h1>Fact</h1>
                     </li>
-                    <li class="nav-page-item <%= "is-active-page-item" if action_name == "ordered_projects"%>">
+                    <li class="nav-page-item <%= "is-active-page-item" if action_name == "ordered_projects" or action_name == "project_detail"%>">
                         <h1>Projects</h1>
                     </li>
                     <li class="nav-page-item <%= "is-active-page-item" if action_name == "about_us"%>">
@@ -48,7 +48,7 @@
                     </li>
                     <li class="l-centered-flex-container">
                         <div id="nav-projects-container">
-                            <a href="index.html"><h1 class="nav-menu-list-item <%= "is-active-menu-item" if action_name == "ordered_projects"%>">Projects</h1></a>
+                            <a href="index.html"><h1 class="nav-menu-list-item <%= "is-active-menu-item" if action_name == "ordered_projects" or action_name == "project_detail"%>">Projects</h1></a>
                             <ul id="nav-projects-dropdown">
                                 <li>
                                     <a href="ordered_projects.html?order_by=year"><h2 class="nav-dropdown-list-item <%= "is-active-menu-item" if params[:order_by] == "year"%>">Year</h2></a>
