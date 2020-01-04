@@ -1,0 +1,19 @@
+@use '../base/mixins' as mix;
+@use '../base/variables' as *;
+
+.contacts-article-header {
+  @include mix.desktop-up {
+    @include mix.header(3);
+    line-height: normal;
+  }
+
+  @include mix.media('margin-bottom', $article-margin-mobile $l-gap-tablet $s-gap-desktop);
+}
+
+.contacts-article-list-item {
+  @include mix.media('margin-bottom', $l-gap-mobile $l-gap-tablet $xs-gap-desktop);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

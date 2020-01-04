@@ -1,0 +1,23 @@
+@use '../base/mixins' as mix;
+
+.l-centered-flex-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#wrapper {
+  @include mix.desktop-up {
+    width: 90%;
+    margin: auto;
+  }
+
+  @include mix.wide-up {
+    width: 1600px;
+    margin: auto;
+  }
+}
+
+
+
+

@@ -1,0 +1,24 @@
+@use '../base/mixins' as mix;
+
+#gallery {
+  grid-area: gallery;
+}
+
+#main-gallery-image {
+  width: 100%;
+}
+
+#gallery-images-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#proj-detail-thumb {
+  @include mix.media('display', block block none);
+}
+
+#project-text {
+  grid-area: text;
+}
+

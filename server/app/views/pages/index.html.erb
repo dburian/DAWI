@@ -1,9 +1,9 @@
 <% content_for :stylesheets do %>
-    <%# stylesheet_link_tag "index", media: "all" %>
+    <%= stylesheet_pack_tag "index_stylesheets", media: "all" %>
 <% end %>
 
 <% content_for :javascripts do %>
-    <%= javascript_pack_tag 'index', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'index' %>
 <% end %>
 <main>
     <ul id="project-list" class="l-unordered-grid-container">
